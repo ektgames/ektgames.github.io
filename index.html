@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>EKT Games | Bağımsız Oyun Geliştirme Stüdyosu</title>
-    <meta name="description" content="EKT Games; Perde Arkası Futbol ve Farm2Shelf gibi sürükleyici simülasyon, menajerlik ve strateji oyunları geliştiren bağımsız oyun stüdyosudur.">
+    <title id="page-title">EKT Games | Bağımsız Oyun Geliştirme Stüdyosu</title>
+    <meta name="description" id="page-meta-desc" content="EKT Games; Perde Arkası Futbol ve Farm2Shelf gibi sürükleyici simülasyon, menajerlik ve strateji oyunları geliştiren bağımsız oyun stüdyosudur.">
     <meta name="theme-color" content="#0a0a0f">
     
     <!-- Favicon -->
@@ -1334,7 +1334,9 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <a href="#contact" class="btn btn-secondary btn-sm" data-tr="Bize Katıl" data-en="Join Us">Bize Katıl</a>
+                    <a href="#contact" class="btn btn-secondary btn-sm" data-tr="Bize Katıl" data-en="Join Us">
+                        <span class="translatable">Bize Katıl</span>
+                    </a>
                     <div class="lang-switcher">
                         <button class="lang-btn active" data-lang-btn="tr" onclick="switchLanguage('tr')">TR</button>
                         <span class="lang-divider">|</span>
@@ -1356,7 +1358,7 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="hero-badge-dot"></span>
-                    <span data-tr="Bağımsız Oyun Stüdyosu" data-en="Indie Game Studio">Bağımsız Oyun Stüdyosu</span>
+                    <span class="translatable" data-tr="Bağımsız Oyun Stüdyosu" data-en="Indie Game Studio">Bağımsız Oyun Stüdyosu</span>
                 </div>
                 <h1 class="hero-title">
                     <span data-tr="Geleceğin Dünyalarını" data-en="Building Future Worlds">Geleceğin Dünyalarını</span><br><span data-tr="Bugünden İnşa Ediyoruz" data-en="Starting Today">Bugünden İnşa Ediyoruz</span>
@@ -1366,10 +1368,10 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary" data-tr="Oyunlarımızı Keşfet" data-en="Explore Our Games">
-                        <i data-lucide="play-circle"></i> Oyunlarımızı Keşfet
+                        <i data-lucide="play-circle"></i> <span class="translatable">Oyunlarımızı Keşfet</span>
                     </a>
                     <a href="#contact" class="btn btn-secondary" data-tr="Bize Ulaşın" data-en="Contact Us">
-                        <i data-lucide="mail"></i> Bize Ulaşın
+                        <i data-lucide="mail"></i> <span class="translatable">Bize Ulaşın</span>
                     </a>
                 </div>
             </div>
@@ -1410,14 +1412,14 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h3 data-tr="Oyuncular için, Oyuncular Tarafından..." data-en="By Gamers, For Gamers...">Oyuncular için, Oyuncular Tarafından...</h3>
-                    <p data-tr="EKT Games olarak, her projemizde benzersiz dünyalar yaratmak için bir araya gelmiş bağımsız ve tutkulu bir ekibiz. Klişelerden uzak, taze fikirler, detaylı ekonomi ve yönetim sistemleriyle oyun dünyasında yeni standartlar oluşturmayı hedefliyoruz." data-en="At EKT Games, we are an independent and passionate team united to create unique worlds in every project. Away from clichés, we aim to set new standards in gaming with fresh ideas, intricate economies, and rich management systems.">
+                    <p data-tr="EKT Games olarak, her projemizde benzersiz dünyalar yaratmak için bir araya gelmiş bağımsız ve tutkulu bir ekibiz. Klişelerden uzak, taze fikirler, detaylı ekonomi ve yönetim sistemleriyle oyun dünyasında yeni standartlar oluşturmayı hedefliyoruz." data-en="At EKT Games, we are an independent and passionate team united to create unique worlds in every project. Stepping away from clichés, we aim to set new standards in gaming with fresh ideas, intricate economies, and rich management systems.">
                         EKT Games olarak, her projemizde benzersiz dünyalar yaratmak için bir araya gelmiş bağımsız ve tutkulu bir ekibiz. Klişelerden uzak, taze fikirler, detaylı ekonomi ve yönetim sistemleriyle oyun dünyasında yeni standartlar oluşturmayı hedefliyoruz.
                     </p>
                     <p data-tr="Teknoloji ile derin oynanış mekaniklerini harmanlayarak, oyunculara sadece keyifli vakit geçirecekleri oyunlar değil; stratejik kararların önem taşıdığı, sürükleyici ve uzun soluklu deneyimler sunuyoruz." data-en="Blending technology with deep gameplay mechanics, we offer players not just entertaining games, but captivating, long-lasting experiences where strategic decisions truly matter.">
                         Teknoloji ile derin oynanış mekaniklerini harmanlayarak, oyunculara sadece keyifli vakit geçirecekleri oyunlar değil; stratejik kararların önem taşıdığı, sürükleyici ve uzun soluklu deneyimler sunuyoruz.
                     </p>
                     <a href="#projects" class="btn btn-secondary" data-tr="Projelere Göz At" data-en="Browse Projects">
-                        <i data-lucide="sparkles"></i> Projelere Göz At
+                        <i data-lucide="sparkles"></i> <span class="translatable">Projelere Göz At</span>
                     </a>
                 </div>
 
@@ -1473,8 +1475,8 @@
                     <div class="game-img-wrapper">
                         <img src="images/perde_arkasi_futbol_icon.png" alt="Perde Arkası Futbol" class="game-img">
                         <div class="game-card-overlay"></div>
-                        <span class="game-status-badge" style="border-color: var(--accent-secondary); color: var(--accent-secondary);" data-tr="iOS App Store" data-en="iOS App Store">
-                            <i data-lucide="apple"></i> iOS App Store
+                        <span class="game-status-badge" style="border-color: var(--accent-secondary); color: var(--accent-secondary);" data-tr="iOS App Store'da Yayında" data-en="Live on iOS App Store">
+                            <i data-lucide="apple"></i> <span class="translatable">iOS App Store'da Yayında</span>
                         </span>
                     </div>
                     <div class="game-content">
@@ -1484,15 +1486,15 @@
                             <span class="game-tag" data-tr="Strateji & Finans" data-en="Strategy & Finance">Strateji & Finans</span>
                         </div>
                         <h3 class="game-title">Perde Arkası Futbol</h3>
-                        <p class="game-desc" data-tr="Futbol dünyasının perde arkasını yönettiğiniz kapsamlı menajerlik simülasyonu. Transfer kulisleri, oyuncu yönetimi, finansal yatırımlar, lig mücadeleleri ve stratejik kararlarla kulübünüzü ve menajerlik kariyerinizi zirveye taşıyın." data-en="A comprehensive behind-the-scenes football agency and club management simulation. Control transfer backstage dealings, talent scouting, squad finances, and strategic boardroom moves to build a global football empire.">
+                        <p class="game-desc" data-tr="Futbol dünyasının perde arkasını yönettiğiniz kapsamlı menajerlik simülasyonu. Transfer kulisleri, oyuncu yönetimi, finansal yatırımlar, lig mücadeleleri ve stratejik kararlarla kulübünüzü ve menajerlik kariyerinizi zirveye taşıyın." data-en="A comprehensive behind-the-scenes football agency and club management simulation. Control transfer backstage dealings, player management, financial investments, leagues, and strategic boardroom moves to build your football legacy.">
                             Futbol dünyasının perde arkasını yönettiğiniz kapsamlı menajerlik simülasyonu. Transfer kulisleri, oyuncu yönetimi, finansal yatırımlar, lig mücadeleleri ve stratejik kararlarla kulübünüzü ve menajerlik kariyerinizi zirveye taşıyın.
                         </p>
                         <div class="game-actions">
-                            <a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" class="btn btn-appstore btn-sm" data-tr="App Store" data-en="App Store">
-                                <i data-lucide="apple"></i> App Store
+                            <a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" class="btn btn-appstore btn-sm" data-tr="App Store'da İndir" data-en="Download on App Store">
+                                <i data-lucide="apple"></i> <span class="translatable">App Store'da İndir</span>
                             </a>
                             <button class="btn btn-secondary btn-sm details-btn" data-game="perde_arkasi_futbol" data-tr="Detaylar" data-en="Details">
-                                <i data-lucide="info"></i> Detaylar
+                                <i data-lucide="info"></i> <span class="translatable">Detaylar</span>
                             </button>
                         </div>
                     </div>
@@ -1504,25 +1506,25 @@
                         <img src="images/farm2shelf_icon.jpg" alt="Farm2Shelf" class="game-img">
                         <div class="game-card-overlay"></div>
                         <span class="game-status-badge" style="border-color: var(--accent-green); color: var(--accent-green);" data-tr="Yakında Çıkacak" data-en="Coming Soon">
-                            <i data-lucide="clock"></i> Yakında Çıkacak
+                            <i data-lucide="clock"></i> <span class="translatable">Yakında Çıkacak</span>
                         </span>
                     </div>
                     <div class="game-content">
                         <div class="game-tags">
-                            <span class="game-tag" data-tr="Çiftlik Simülasyonu" data-en="Farm Simulator">Çiftlik Simülasyonu</span>
+                            <span class="game-tag" data-tr="Çiftlik Simülasyonu" data-en="Farm Simulation">Çiftlik Simülasyonu</span>
                             <span class="game-tag" data-tr="Market Yönetimi" data-en="Store Tycoon">Market Yönetimi</span>
                             <span class="game-tag" data-tr="Ekonomi & Strateji" data-en="Economy & Strategy">Ekonomi & Strateji</span>
                         </div>
                         <h3 class="game-title">Farm2Shelf</h3>
-                        <p class="game-desc" data-tr="Tarladan raflara uzanan üretim ve perakende zinciri! Kendi mahsullerinizi ekip hasat edin, atölyelerde işleyerek katma değerli ürünlere dönüştürün, mağazanızı dekore edin ve toptan & online pazar siparişleriyle ticaret imparatorluğunuzu büyütün." data-en="The ultimate farm-to-retail tycoon journey! Plant and harvest crops, craft processed goods in workshops, design your dream supermarket, and manage wholesale truck shipments and online market orders.">
+                        <p class="game-desc" data-tr="Tarladan raflara uzanan üretim ve perakende zinciri! Kendi mahsullerinizi ekip hasat edin, atölyelerde işleyerek katma değerli ürünlere dönüştürün, mağazanızı dekore edin ve toptan & online pazar siparişleriyle ticaret imparatorluğunuzu büyütün." data-en="The ultimate farm-to-retail tycoon journey! Plant and harvest crops, craft processed goods in workshops, design your store, and manage wholesale truck shipments and online market orders to grow your retail empire.">
                             Tarladan raflara uzanan üretim ve perakende zinciri! Kendi mahsullerinizi ekip hasat edin, atölyelerde işleyerek katma değerli ürünlere dönüştürün, mağazanızı dekore edin ve toptan & online pazar siparişleriyle ticaret imparatorluğunuzu büyütün.
                         </p>
                         <div class="game-actions">
                             <button class="btn btn-green btn-sm details-btn" data-game="farm2shelf" data-tr="Detayları İncele" data-en="Explore Details">
-                                <i data-lucide="sparkles"></i> Detayları İncele
+                                <i data-lucide="sparkles"></i> <span class="translatable">Detayları İncele</span>
                             </button>
                             <a href="#contact" class="btn btn-secondary btn-sm select-game-link" data-select-game="farm2shelf" data-tr="Geri Bildirim" data-en="Feedback">
-                                <i data-lucide="mail"></i> Geri Bildirim
+                                <i data-lucide="mail"></i> <span class="translatable">Geri Bildirim</span>
                             </a>
                         </div>
                     </div>
@@ -1590,7 +1592,7 @@
                         <label for="interest" data-tr="İlginizi Çeken Oyun" data-en="Game of Interest">İlginizi Çeken Oyun</label>
                         <select id="interest" name="game" class="form-control">
                             <option value="none" data-tr="Seçiniz..." data-en="Select...">Seçiniz...</option>
-                            <option value="perde-arkasi-futbol" data-tr="Perde Arkası Futbol" data-en="Perde Arkası Futbol">Perde Arkası Futbol</option>
+                            <option value="perde-arkasi-futbol" data-tr="Perde Arkası Futbol" data-en="Behind the Scenes Football">Perde Arkası Futbol</option>
                             <option value="farm2shelf" data-tr="Farm2Shelf" data-en="Farm2Shelf">Farm2Shelf</option>
                             <option value="general" data-tr="Genel İletişim / İş Birliği" data-en="General Inquiry / Partnership">Genel İletişim / İş Birliği</option>
                         </select>
@@ -1602,7 +1604,7 @@
                     </div>
 
                     <button type="submit" id="submit-btn" class="btn btn-primary" style="align-self: flex-start;" data-tr="Mesajı Gönder" data-en="Send Message">
-                        <span>Mesajı Gönder</span> <i data-lucide="send"></i>
+                        <span class="translatable">Mesajı Gönder</span> <i data-lucide="send"></i>
                     </button>
                 </form>
             </div>
@@ -1630,8 +1632,8 @@
                 <div class="footer-links-col">
                     <h4 data-tr="OYUNLARIMIZ" data-en="OUR GAMES">OYUNLARIMIZ</h4>
                     <ul class="footer-links">
-                        <li><a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer">Perde Arkası Futbol (iOS)</a></li>
-                        <li><a href="#projects" onclick="document.querySelector('[data-game=\'farm2shelf\']').click();">Farm2Shelf (Yakında)</a></li>
+                        <li><a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" data-tr="Perde Arkası Futbol (iOS)" data-en="Behind the Scenes Football (iOS)">Perde Arkası Futbol (iOS)</a></li>
+                        <li><a href="#projects" onclick="openGameModalFromKey('farm2shelf')" data-tr="Farm2Shelf (Yakında)" data-en="Farm2Shelf (Coming Soon)">Farm2Shelf (Yakında)</a></li>
                         <li><a href="#contact" data-tr="Oyuncu Desteği" data-en="Player Support">Oyuncu Desteği</a></li>
                     </ul>
                 </div>
@@ -1670,6 +1672,10 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
+        // Track current language globally
+        let currentLang = localStorage.getItem('ekt_website_lang') || 'tr';
+        let currentActiveModalKey = null;
+
         // Initialize Lucide Icons
         lucide.createIcons();
 
@@ -1735,6 +1741,7 @@
         function closeModal() {
             modal.classList.remove('active');
             document.body.style.overflow = '';
+            currentActiveModalKey = null;
         }
 
         modalOverlay.addEventListener('click', closeModal);
@@ -1744,129 +1751,209 @@
             if (e.key === 'Escape') closeModal();
         });
 
-        // Games Detailed Information Database
+        // Comprehensive Bilingual Games Database
         const gamesData = {
             perde_arkasi_futbol: {
-                title: "Perde Arkası Futbol",
-                badge: "iOS App Store'da Yayında",
-                color: "var(--accent-secondary)",
-                badgeColor: "rgba(6, 182, 212, 0.15)",
-                desc: "Futbol sahalarının ötesine geçin! Perde Arkası Futbol; transfer kulislerini, oyuncu menajerliğini, kulüp yatırımlarını, finansal bütçeleri ve gizli anlaşmaları yönettiğiniz derinlikli bir strateji simülasyonudur.",
-                lore: "Futbolda maçlar 90 dakikada biter, ancak gerçek zaferler kulislerde, transfer masalarında ve doğru yatırımlarda kazanılır. Kendi menajerlik şirketinizi veya kulübünüzü yönetin, yıldız adaylarını keşfedin, astronomik transfer tekliflerini değerlendirin ve futbol dünyasının perde arkasındaki en güçlü figürü olun.",
-                features: [
-                    "Kapsamlı Transfer & Kulis Sistemi: Sözleşme pazarlıkları, serbest kalma maddeleri ve gizli transfer teklifleri",
-                    "Geniş Oyuncu & Yetenek Havuzu: Oyuncu gelişimi, menajerlik ilişkileri, form durumu ve moral takibi",
-                    "Finans, Sponsorluk & Yatırım Yönetimi: Kulüp gelir-gider dengesi, gayrimenkul ve borsa yatırımları",
-                    "Dinamik Ligler & Maç Simülasyonu: Sezonluk fikstürler, puan durumu, kupa mücadeleleri ve turnuvalar",
-                    "Sosyal Medya & Basın Gündemi: Basın toplantıları, kamuoyu algısı ve kulüp dedikoduları"
-                ],
-                stats: {
-                    "Kategori": "Futbol Menajerlik / Simülasyon",
-                    "Platform": "iOS (iPhone, iPad)",
-                    "Durum": "Yayında (App Store)",
-                    "Geliştirici": "EKT Games",
-                    "Dil Desteği": "Türkçe, İngilizce"
+                tr: {
+                    title: "Perde Arkası Futbol",
+                    badge: "iOS App Store'da Yayında",
+                    color: "var(--accent-secondary)",
+                    badgeColor: "rgba(6, 182, 212, 0.15)",
+                    desc: "Futbol sahalarının ötesine geçin! Perde Arkası Futbol; transfer kulislerini, oyuncu menajerliğini, kulüp yatırımlarını, finansal bütçeleri ve gizli anlaşmaları yönettiğiniz derinlikli bir strateji simülasyonudur.",
+                    lore: "Futbolda maçlar 90 dakikada biter, ancak gerçek zaferler kulislerde, transfer masalarında ve doğru yatırımlarda kazanılır. Kendi menajerlik şirketinizi veya kulübünüzü yönetin, yıldız adaylarını keşfedin, astronomik transfer tekliflerini değerlendirin ve futbol dünyasının perde arkasındaki en güçlü figürü olun.",
+                    featuresTitle: "Öne Çıkan Özellikler",
+                    features: [
+                        "Kapsamlı Transfer & Kulis Sistemi: Sözleşme pazarlıkları, serbest kalma maddeleri ve gizli transfer teklifleri",
+                        "Geniş Oyuncu & Yetenek Havuzu: Oyuncu gelişimi, menajerlik ilişkileri, form durumu ve moral takibi",
+                        "Finans, Sponsorluk & Yatırım Yönetimi: Kulüp gelir-gider dengesi, gayrimenkul ve borsa yatırımları",
+                        "Dinamik Ligler & Maç Simülasyonu: Sezonluk fikstürler, puan durumu, kupa mücadeleleri ve turnuvalar",
+                        "Sosyal Medya & Basın Gündemi: Basın toplantıları, kamuoyu algısı ve kulüp dedikoduları"
+                    ],
+                    overviewTitle: "Oyun Künyesi",
+                    stats: {
+                        "Kategori": "Futbol Menajerlik / Simülasyon",
+                        "Platform": "iOS (iPhone, iPad)",
+                        "Durum": "Yayında (App Store)",
+                        "Geliştirici": "EKT Games",
+                        "Dil Desteği": "Türkçe, İngilizce"
+                    },
+                    appStoreBtnText: "App Store'da İndir",
+                    closeBtnText: "Kapat"
                 },
-                actionBtn: `
-                    <a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" class="btn btn-appstore">
-                        <i data-lucide="apple"></i> App Store'da İndir
-                    </a>
-                `
+                en: {
+                    title: "Behind the Scenes Football",
+                    badge: "Live on iOS App Store",
+                    color: "var(--accent-secondary)",
+                    badgeColor: "rgba(6, 182, 212, 0.15)",
+                    desc: "Step beyond the pitch! Behind the Scenes Football is an in-depth football agency and club management simulation where you control backstage transfer dealings, player scouting, investments, budgets, and boardroom moves.",
+                    lore: "Matches finish in 90 minutes, but true glory is won in boardroom negotiations and strategic investments. Run your own agency or club, discover rising talents, negotiate massive transfer deals, and become the most influential figure behind the scenes of global football.",
+                    featuresTitle: "Key Features",
+                    features: [
+                        "Deep Transfer & Negotiation System: Contract clauses, buyout terms, and confidential bids",
+                        "Extensive Player & Scouting Database: Player progression, agent ties, form, and morale tracking",
+                        "Finance, Sponsorship & Investment Management: Balance sheets, property assets, and market investments",
+                        "Dynamic Leagues & Match Simulation: Season fixtures, live table standings, and championship cups",
+                        "Media, Press & Public Narrative: Press conferences, fan perception, and locker-room headlines"
+                    ],
+                    overviewTitle: "Game Overview",
+                    stats: {
+                        "Category": "Football Manager / Simulation",
+                        "Platform": "iOS (iPhone, iPad)",
+                        "Status": "Available on App Store",
+                        "Developer": "EKT Games",
+                        "Languages": "Turkish, English"
+                    },
+                    appStoreBtnText: "Download on App Store",
+                    closeBtnText: "Close"
+                }
             },
             farm2shelf: {
-                title: "Farm2Shelf",
-                badge: "Geliştirilme Aşamasında • Yakında Çıkacak",
-                color: "var(--accent-green)",
-                badgeColor: "rgba(16, 185, 129, 0.15)",
-                desc: "Tarlada ekilen tohumdan raflardaki gurme ürünlere! Farm2Shelf; tarım üretimi, atölye işleme süreçleri, mağaza tasarımı, toptan lojistik ve online market teslimatlarını birleştiren yeni nesil bir işletme simülasyonudur.",
-                lore: "Küçük bir tarla ve mütevazı bir manav reyonuyla başlayıp, organik ürün fabrikaları ve modern süpermarket zincirleriyle devasa bir ticaret imparatorluğu kurmaya hazır mısınız? Mahsulünüzü en verimli şekilde işleyin, raflarınızı doldurun ve şehrin en büyük perakendecisi olun.",
-                features: [
-                    "Çiftlik & Hasat Mekaniği: Çeşitli sebze, meyve ve özel tohumları ekme, sulama ve hasat etme",
-                    "Atölye & Üretim Hatları: Hammaddeleri konserve, sos, unlu mamul ve paketli ürünlere dönüştürme",
-                    "Mağaza Dizaynı & Raf Yönetimi: Reyon yerleşimi, kasa düzeni, müşteri trafiği optimizasyonu ve dekorasyon",
-                    "Toptan Lojistik & Kamyon Sevkiyatı: Şehir içi tedarik zinciri, toptancı teslimatları ve kargo yönetimi",
-                    "Online Market Siparişleri & Kurye Sistemi: E-ticaret siparişlerini hızlı kuryelerle kapıya ulaştırma",
-                    "Finans, Banka Kredileri & Personel Yönetimi: Kasiyer, reyon görevlisi ve şoför istihdamı"
-                ],
-                stats: {
-                    "Kategori": "Çiftlik & Market Tycoon / Simülasyon",
-                    "Platform": "Mobil (iOS & Android)",
-                    "Durum": "Yakında Çıkacak",
-                    "Geliştirici": "EKT Games",
-                    "Dil Desteği": "Türkçe, İngilizce"
+                tr: {
+                    title: "Farm2Shelf",
+                    badge: "Geliştirilme Aşamasında • Yakında Çıkacak",
+                    color: "var(--accent-green)",
+                    badgeColor: "rgba(16, 185, 129, 0.15)",
+                    desc: "Tarlada ekilen tohumdan raflardaki gurme ürünlere! Farm2Shelf; tarım üretimi, atölye işleme süreçleri, mağaza tasarımı, toptan lojistik ve online market teslimatlarını birleştiren yeni nesil bir işletme simülasyonudur.",
+                    lore: "Küçük bir tarla ve mütevazı bir manav reyonuyla başlayıp, organik ürün fabrikaları ve modern süpermarket zincirleriyle devasa bir ticaret imparatorluğu kurmaya hazır mısınız? Mahsulünüzü en verimli şekilde işleyin, raflarınızı doldurun ve şehrin en büyük perakendecisi olun.",
+                    featuresTitle: "Öne Çıkan Özellikler",
+                    features: [
+                        "Çiftlik & Hasat Mekaniği: Çeşitli sebze, meyve ve özel tohumları ekme, sulama ve hasat etme",
+                        "Atölye & Üretim Hatları: Hammaddeleri konserve, sos, unlu mamul ve paketli ürünlere dönüştürme",
+                        "Mağaza Dizaynı & Raf Yönetimi: Reyon yerleşimi, kasa düzeni, müşteri trafiği optimizasyonu ve dekorasyon",
+                        "Toptan Lojistik & Kamyon Sevkiyatı: Şehir içi tedarik zinciri, toptancı teslimatları ve kargo yönetimi",
+                        "Online Market Siparişleri & Kurye Sistemi: E-ticaret siparişlerini hızlı kuryelerle kapıya ulaştırma",
+                        "Finans, Banka Kredileri & Personel Yönetimi: Kasiyer, reyon görevlisi ve şoför istihdamı"
+                    ],
+                    overviewTitle: "Oyun Künyesi",
+                    stats: {
+                        "Kategori": "Çiftlik & Market Tycoon / Simülasyon",
+                        "Platform": "Mobil (iOS & Android)",
+                        "Durum": "Yakında Çıkacak",
+                        "Geliştirici": "EKT Games",
+                        "Dil Desteği": "Türkçe, İngilizce"
+                    },
+                    contactBtnText: "Erken Erişim / Geri Bildirim",
+                    closeBtnText: "Kapat"
                 },
-                actionBtn: `
-                    <a href="#contact" onclick="closeModal(); document.getElementById('interest').value='farm2shelf';" class="btn btn-green">
-                        <i data-lucide="mail"></i> Erken Erişim / Geri Bildirim
-                    </a>
-                `
+                en: {
+                    title: "Farm2Shelf",
+                    badge: "In Development • Coming Soon",
+                    color: "var(--accent-green)",
+                    badgeColor: "rgba(16, 185, 129, 0.15)",
+                    desc: "From harvested seeds to supermarket shelves! Farm2Shelf is a next-generation business tycoon simulation combining crop farming, workshop processing, supermarket design, wholesale logistics, and e-commerce deliveries.",
+                    lore: "Ready to start with a humble farm plot and expand into food processing plants and modern supermarket chains? Cultivate your crops, craft high-value gourmet goods, optimize checkout flows, and build the city's largest retail empire.",
+                    featuresTitle: "Key Features",
+                    features: [
+                        "Farming & Harvesting Mechanics: Plant, water, and harvest organic fruits, vegetables, and specialty crops",
+                        "Workshop & Processing Lines: Transform raw produce into canned food, sauces, baked goods, and packaged items",
+                        "Supermarket Design & Shelf Management: Aisle layouts, shelf stocking, customer flow optimization, and decor",
+                        "Wholesale Logistics & Truck Delivery: Supply chain distribution, wholesale truck fleets, and cargo routing",
+                        "Online Grocery Orders & Courier Dispatch: Dispatch express couriers to fulfill online orders across the city",
+                        "Finance, Loans & Staff Management: Hire cashiers, stock clerks, drivers, and scale your business"
+                    ],
+                    overviewTitle: "Game Overview",
+                    stats: {
+                        "Category": "Farm & Supermarket Tycoon",
+                        "Platform": "Mobile (iOS & Android)",
+                        "Status": "Coming Soon",
+                        "Developer": "EKT Games",
+                        "Languages": "Turkish, English"
+                    },
+                    contactBtnText: "Early Access / Feedback",
+                    closeBtnText: "Close"
+                }
             }
         };
+
+        function renderGameModal(gameKey, lang) {
+            const gameLangData = gamesData[gameKey] ? gamesData[gameKey][lang] : null;
+            if (!gameLangData) return;
+
+            currentActiveModalKey = gameKey;
+
+            let featuresHtml = '';
+            gameLangData.features.forEach(f => {
+                featuresHtml += `
+                    <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; font-size:14px; color:var(--text-muted); line-height:1.5;">
+                        <i data-lucide="check-circle-2" style="color:${gameLangData.color}; flex-shrink:0; width:18px; height:18px; margin-top:2px;"></i>
+                        <span>${f}</span>
+                    </li>
+                `;
+            });
+
+            let statsHtml = '';
+            for (const [key, val] of Object.entries(gameLangData.stats)) {
+                statsHtml += `
+                    <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); padding:12px; border-radius:10px; text-align:center;">
+                        <span style="font-size:11px; color:var(--text-darker); text-transform:uppercase; display:block; margin-bottom:4px; font-weight:600;">${key}</span>
+                        <strong style="font-size:13px; font-family:var(--font-display); color:var(--text-main);">${val}</strong>
+                    </div>
+                `;
+            }
+
+            let actionBtnHtml = '';
+            if (gameKey === 'perde_arkasi_futbol') {
+                actionBtnHtml = `
+                    <a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" class="btn btn-appstore">
+                        <i data-lucide="apple"></i> ${gameLangData.appStoreBtnText}
+                    </a>
+                `;
+            } else {
+                actionBtnHtml = `
+                    <a href="#contact" onclick="closeModal(); document.getElementById('interest').value='farm2shelf';" class="btn btn-green">
+                        <i data-lucide="mail"></i> ${gameLangData.contactBtnText}
+                    </a>
+                `;
+            }
+
+            openModal(`
+                <div>
+                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                        <span style="background:${gameLangData.badgeColor}; border:1px solid ${gameLangData.color}; color:${gameLangData.color}; font-size:12px; padding:4px 14px; border-radius:50px; font-weight:700; font-family:var(--font-display);">${gameLangData.badge}</span>
+                    </div>
+                    <h2 style="font-family: var(--font-display); font-size:clamp(24px, 3.5vw, 32px); margin-bottom:14px; color:var(--text-main); font-weight:800;">${gameLangData.title}</h2>
+                    
+                    <p style="color:var(--text-main); font-size:15px; margin-bottom:18px; line-height:1.7;">
+                        ${gameLangData.desc}
+                    </p>
+
+                    <div style="border-left: 3px solid ${gameLangData.color}; padding-left:16px; margin: 20px 0; font-style:italic; color:var(--text-muted); font-size:14px; line-height:1.6;">
+                        "${gameLangData.lore}"
+                    </div>
+
+                    <h3 style="font-family:var(--font-display); font-size:18px; margin-bottom:12px; color:var(--text-main); font-weight:700;">${gameLangData.featuresTitle}</h3>
+                    <ul style="list-style:none; padding:0; margin-bottom:24px;">
+                        ${featuresHtml}
+                    </ul>
+
+                    <h3 style="font-family:var(--font-display); font-size:18px; margin-bottom:12px; color:var(--text-main); font-weight:700;">${gameLangData.overviewTitle}</h3>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; margin-bottom:28px;">
+                        ${statsHtml}
+                    </div>
+
+                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                        ${actionBtnHtml}
+                        <button class="btn btn-secondary" onclick="closeModal()">
+                            ${gameLangData.closeBtnText}
+                        </button>
+                    </div>
+                </div>
+            `);
+        }
+
+        function openGameModalFromKey(key) {
+            renderGameModal(key, currentLang);
+        }
 
         // Detail Button Click Handler
         document.querySelectorAll('.details-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const gameKey = btn.getAttribute('data-game');
-                const game = gamesData[gameKey];
-                if (!game) return;
-
-                let featuresHtml = '';
-                game.features.forEach(f => {
-                    featuresHtml += `
-                        <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; font-size:14px; color:var(--text-muted); line-height:1.5;">
-                            <i data-lucide="check-circle-2" style="color:${game.color}; flex-shrink:0; width:18px; height:18px; margin-top:2px;"></i>
-                            <span>${f}</span>
-                        </li>
-                    `;
-                });
-
-                let statsHtml = '';
-                for (const [key, val] of Object.entries(game.stats)) {
-                    statsHtml += `
-                        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-color); padding:12px; border-radius:10px; text-align:center;">
-                            <span style="font-size:11px; color:var(--text-darker); text-transform:uppercase; display:block; margin-bottom:4px; font-weight:600;">${key}</span>
-                            <strong style="font-size:13px; font-family:var(--font-display); color:var(--text-main);">${val}</strong>
-                        </div>
-                    `;
-                }
-
-                openModal(`
-                    <div>
-                        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-                            <span style="background:${game.badgeColor}; border:1px solid ${game.color}; color:${game.color}; font-size:12px; padding:4px 14px; border-radius:50px; font-weight:700; font-family:var(--font-display);">${game.badge}</span>
-                        </div>
-                        <h2 style="font-family: var(--font-display); font-size:clamp(24px, 3.5vw, 32px); margin-bottom:14px; color:var(--text-main); font-weight:800;">${game.title}</h2>
-                        
-                        <p style="color:var(--text-main); font-size:15px; margin-bottom:18px; line-height:1.7;">
-                            ${game.desc}
-                        </p>
-
-                        <div style="border-left: 3px solid ${game.color}; padding-left:16px; margin: 20px 0; font-style:italic; color:var(--text-muted); font-size:14px; line-height:1.6;">
-                            "${game.lore}"
-                        </div>
-
-                        <h3 style="font-family:var(--font-display); font-size:18px; margin-bottom:12px; color:var(--text-main); font-weight:700;">Öne Çıkan Özellikler</h3>
-                        <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                            ${featuresHtml}
-                        </ul>
-
-                        <h3 style="font-family:var(--font-display); font-size:18px; margin-bottom:12px; color:var(--text-main); font-weight:700;">Oyun Künyesi</h3>
-                        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; margin-bottom:28px;">
-                            ${statsHtml}
-                        </div>
-
-                        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                            ${game.actionBtn}
-                            <button class="btn btn-secondary" onclick="closeModal()">
-                                Kapat
-                            </button>
-                        </div>
-                    </div>
-                `);
+                renderGameModal(gameKey, currentLang);
             });
         });
 
-        // Contact Form Submission (Delivered directly to ertugrulkaantemur@gmail.com)
+        // Contact Form Submission
         const contactForm = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
 
@@ -1881,13 +1968,12 @@
             if (!name || !email || !message) return;
 
             // Update button state to loading
-            const originalBtnText = submitBtn.innerHTML;
+            const sendingText = currentLang === 'en' ? 'Sending...' : 'Gönderiliyor...';
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `<span>Gönderiliyor...</span> <i data-lucide="loader" style="animation: spin 1.5s linear infinite;"></i>`;
+            submitBtn.innerHTML = `<span>${sendingText}</span> <i data-lucide="loader" style="animation: spin 1.5s linear infinite;"></i>`;
             lucide.createIcons();
 
             try {
-                // Send form directly to ertugrulkaantemur@gmail.com via FormSubmit AJAX endpoint
                 const response = await fetch("https://formsubmit.co/ajax/ertugrulkaantemur@gmail.com", {
                     method: "POST",
                     headers: { 
@@ -1895,7 +1981,7 @@
                         'Accept': 'application/json'
                     },
                     body: JSON.stringify({
-                        _subject: `EKT Games İletişim: ${name} (${gameInterest})`,
+                        _subject: `EKT Games Contact: ${name} (${gameInterest})`,
                         Ad_Soyad: name,
                         Email: email,
                         Ilgili_Oyun: gameInterest,
@@ -1904,75 +1990,110 @@
                 });
 
                 if (response.ok) {
+                    const successTitle = currentLang === 'en' ? 'Your Message Was Sent Successfully!' : 'Mesajınız Başarıyla İletildi!';
+                    const successDesc = currentLang === 'en'
+                        ? `Thank you <strong>${name}</strong>! Your message was delivered directly to <strong>ertugrulkaantemur@gmail.com</strong>. Our team will get back to you at <strong>${email}</strong> shortly.`
+                        : `Teşekkürler <strong>${name}</strong>! Mesajınız doğrudan <strong>ertugrulkaantemur@gmail.com</strong> adresimize iletildi. Ekibimiz en kısa sürede <strong>${email}</strong> adresiniz üzerinden sizinle iletişime geçecektir.`;
+                    const okBtnText = currentLang === 'en' ? 'Done' : 'Tamam';
+
                     openModal(`
                         <div class="alert-success-modal">
                             <div class="success-checkmark">
                                 <i data-lucide="check"></i>
                             </div>
-                            <h3 class="neon-text-green" style="font-family: var(--font-display); font-size: 24px; font-weight: 700;">Mesajınız Başarıyla İletildi!</h3>
+                            <h3 class="neon-text-green" style="font-family: var(--font-display); font-size: 24px; font-weight: 700;">${successTitle}</h3>
                             <p style="color: var(--text-muted); font-size: 15px; max-width: 460px; line-height: 1.6;">
-                                Teşekkürler <strong>${name}</strong>! Mesajınız doğrudan <strong>ertugrulkaantemur@gmail.com</strong> adresimize iletildi. Ekibimiz en kısa sürede <strong>${email}</strong> adresiniz üzerinden sizinle iletişime geçecektir.
+                                ${successDesc}
                             </p>
                             <button class="btn btn-primary" onclick="closeModal()" style="margin-top: 10px;">
-                                Tamam <i data-lucide="check-circle"></i>
+                                ${okBtnText} <i data-lucide="check-circle"></i>
                             </button>
                         </div>
                     `);
                     contactForm.reset();
                 } else {
-                    throw new Error("Sunucu yanıtı başarısız");
+                    throw new Error("Server error");
                 }
             } catch (err) {
-                // Fallback direct mailto execution if network/offline
-                const mailtoUrl = `mailto:ertugrulkaantemur@gmail.com?subject=${encodeURIComponent("EKT Games İletişim: " + name)}&body=${encodeURIComponent("Ad: " + name + "\nEmail: " + email + "\nOyun: " + gameInterest + "\n\nMesaj:\n" + message)}`;
-                
+                const mailtoUrl = `mailto:ertugrulkaantemur@gmail.com?subject=${encodeURIComponent("EKT Games Contact: " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nGame: " + gameInterest + "\n\nMessage:\n" + message)}`;
+                const fallbackTitle = currentLang === 'en' ? 'Send via Email Client' : 'E-posta İstemcisiyle Gönderin';
+                const fallbackDesc = currentLang === 'en'
+                    ? `Click the button below to send your message directly to <strong>ertugrulkaantemur@gmail.com</strong>.`
+                    : `Mesajınızı doğrudan <strong>ertugrulkaantemur@gmail.com</strong> adresimize göndermek için aşağıdaki butona tıklayabilirsiniz.`;
+                const openAppText = currentLang === 'en' ? 'Open Email App' : 'E-posta Uygulamasında Aç';
+                const closeText = currentLang === 'en' ? 'Close' : 'Kapat';
+
                 openModal(`
                     <div class="alert-success-modal">
                         <div class="success-checkmark" style="border-color: var(--accent-secondary); color: var(--accent-secondary); background: rgba(6, 182, 212, 0.1);">
                             <i data-lucide="mail"></i>
                         </div>
-                        <h3 class="neon-text-cyan" style="font-family: var(--font-display); font-size: 22px; font-weight: 700;">E-posta İstemcisiyle Gönderin</h3>
+                        <h3 class="neon-text-cyan" style="font-family: var(--font-display); font-size: 22px; font-weight: 700;">${fallbackTitle}</h3>
                         <p style="color: var(--text-muted); font-size: 14px; max-width: 440px; line-height: 1.6;">
-                            Mesajınızı doğrudan <strong>ertugrulkaantemur@gmail.com</strong> adresimize göndermek için aşağıdaki butona tıklayabilirsiniz.
+                            ${fallbackDesc}
                         </p>
                         <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; justify-content: center;">
                             <a href="${mailtoUrl}" class="btn btn-primary">
-                                E-posta Uygulamasında Aç <i data-lucide="external-link"></i>
+                                ${openAppText} <i data-lucide="external-link"></i>
                             </a>
                             <button class="btn btn-secondary" onclick="closeModal()">
-                                Kapat
+                                ${closeText}
                             </button>
                         </div>
                     </div>
                 `);
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
+                const submitText = currentLang === 'en' ? 'Send Message' : 'Mesajı Gönder';
+                submitBtn.innerHTML = `<span class="translatable">${submitText}</span> <i data-lucide="send"></i>`;
                 lucide.createIcons();
             }
         });
 
-        // Bilingual Language Switcher (TR / EN)
+        // Instant Bilingual Language Switcher (TR / EN)
         function switchLanguage(lang) {
+            currentLang = lang;
             localStorage.setItem('ekt_website_lang', lang);
             document.documentElement.lang = lang;
-            
+
+            // 1. Page Title & Meta Description
+            const pageTitle = document.getElementById('page-title');
+            const pageMeta = document.getElementById('page-meta-desc');
+            if (lang === 'en') {
+                if (pageTitle) pageTitle.innerText = "EKT Games | Independent Game Studio";
+                if (pageMeta) pageMeta.setAttribute("content", "EKT Games is an independent game development studio creating immersive simulation, management, and strategy titles including Behind the Scenes Football and Farm2Shelf.");
+            } else {
+                if (pageTitle) pageTitle.innerText = "EKT Games | Bağımsız Oyun Geliştirme Stüdyosu";
+                if (pageMeta) pageMeta.setAttribute("content", "EKT Games; Perde Arkası Futbol ve Farm2Shelf gibi sürükleyici simülasyon, menajerlik ve strateji oyunları geliştiren bağımsız oyun stüdyosudur.");
+            }
+
+            // 2. All Elements with data-tr and data-en
             document.querySelectorAll('[data-tr][data-en]').forEach(el => {
                 const text = el.getAttribute(`data-${lang}`);
-                if (text) {
-                    const icon = el.querySelector('i');
-                    if (icon) {
-                        el.childNodes.forEach(node => {
-                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
-                                node.textContent = ' ' + text + ' ';
-                            }
-                        });
-                    } else {
+                if (!text) return;
+
+                // Check if element has a .translatable child span (preserves icon SVGs)
+                const transSpan = el.querySelector('.translatable');
+                if (transSpan) {
+                    transSpan.innerText = text;
+                } else if (el.tagName === 'OPTION') {
+                    el.innerText = text;
+                } else {
+                    // Check if it has child nodes
+                    let hasElementChildren = false;
+                    for (let child of el.children) {
+                        if (child.tagName !== 'SPAN' || !child.classList.contains('translatable')) {
+                            hasElementChildren = true;
+                            break;
+                        }
+                    }
+                    if (!hasElementChildren) {
                         el.innerText = text;
                     }
                 }
             });
 
+            // 3. Placeholders
             document.querySelectorAll('[data-placeholder-tr][data-placeholder-en]').forEach(el => {
                 const ph = el.getAttribute(`data-placeholder-${lang}`);
                 if (ph) {
@@ -1980,6 +2101,7 @@
                 }
             });
 
+            // 4. Language Switcher Buttons state
             document.querySelectorAll('[data-lang-btn]').forEach(btn => {
                 if (btn.getAttribute('data-lang-btn') === lang) {
                     btn.classList.add('active');
@@ -1987,10 +2109,18 @@
                     btn.classList.remove('active');
                 }
             });
+
+            // 5. If a game modal is currently open, live re-render it in the new language!
+            if (modal.classList.contains('active') && currentActiveModalKey) {
+                renderGameModal(currentActiveModalKey, lang);
+            }
+
+            // Re-render icons if needed
+            lucide.createIcons();
         }
 
-        const savedLang = localStorage.getItem('ekt_website_lang') || 'tr';
-        switchLanguage(savedLang);
+        // Apply saved language on page load
+        switchLanguage(currentLang);
     </script>
 </body>
 </html>
