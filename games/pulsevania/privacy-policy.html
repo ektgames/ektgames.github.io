@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsevania - Privacy Policy | EKT Games</title>
+    <meta name="description" content="Privacy Policy for Pulsevania mobile game on iOS. Formatted in English & Turkish in compliance with UK GDPR and Apple App Store guidelines.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-darker: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121f;
+            --accent-primary: #8b5cf6;
+            --accent-secondary: #06b6d4;
+            --accent-red: #ef4444;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --transition-smooth: all 0.3s ease;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-primary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover {
+            color: var(--text-main);
+        }
+
+        /* LANGUAGE SWITCHER */
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        .lang-btn.active {
+            color: white;
+            background: var(--accent-red);
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+        }
+
+        .lang-divider {
+            color: var(--border-color);
+        }
+
+        .policy-wrapper {
+            padding: 130px 0 80px 0;
+        }
+
+        .policy-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+
+        .policy-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50px;
+            color: var(--accent-primary);
+            font-size: 12px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .policy-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .policy-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .policy-body section {
+            margin-bottom: 36px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .policy-body h2 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--accent-secondary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-body p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 14px;
+        }
+
+        .policy-body ul {
+            margin-left: 20px;
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .policy-body li {
+            margin-bottom: 8px;
+        }
+
+        .contact-card {
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+
+        footer {
+            padding: 30px 0;
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="shield"></i>
+                    </div>
+                    <span>Pulsevania</span>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link" data-tr="Oyun Sayfası" data-en="Game Page">Game Page</a></li>
+                        <li><a href="privacy-choices.html" class="nav-link" data-tr="Gizlilik Tercihleri" data-en="Privacy Choices">Privacy Choices</a></li>
+                        <li><a href="support.html" class="nav-link" data-tr="Destek" data-en="Support">Support</a></li>
+                        <li><a href="../../index.html" class="nav-link" data-tr="Stüdyo Ana Sayfa" data-en="EKT Games Home">EKT Games Home</a></li>
+                    </ul>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" data-lang-btn="tr" onclick="switchLanguage('tr')">TR</button>
+                        <span class="lang-divider">|</span>
+                        <button class="lang-btn active" data-lang-btn="en" onclick="switchLanguage('en')">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="policy-wrapper">
+        <div class="container">
+            <div class="policy-header">
+                <span class="policy-badge" data-tr="Apple App Store & GDPR Uyumlu" data-en="English (U.K.) Compliance Standard">English (U.K.) Compliance Standard</span>
+                <h1 class="policy-title" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Privacy Policy</h1>
+                <div class="policy-meta">
+                    <span><strong data-tr="Oyun:" data-en="Game:">Game:</strong> Pulsevania (iOS / iPadOS)</span> &bull; 
+                    <span><strong data-tr="Geliştirici:" data-en="Publisher:">Publisher:</strong> EKT Games</span> &bull; 
+                    <span><strong data-tr="Son Güncelleme:" data-en="Last Updated:">Last Updated:</strong> 22 July 2026</span>
+                </div>
+            </div>
+
+            <div class="policy-body">
+                <section>
+                    <h2><i data-lucide="info"></i> <span data-tr="1. Genel Bakış ve Veri Sorumlusu" data-en="1. Overview & Data Controller">1. Overview & Data Controller</span></h2>
+                    <p data-tr="Bu Gizlilik Politikası, EKT Games (&quot;biz&quot; veya &quot;bizim&quot;) tarafından geliştirilen Pulsevania mobil oyununun iOS ve iPadOS cihazlarınızdaki veri işleme süreçlerini açıklamaktadır." data-en="This Privacy Policy describes how EKT Games (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) handles data in connection with your download, installation, and use of our mobile game Pulsevania on Apple iOS and iPadOS devices.">
+                        This Privacy Policy describes how <strong>EKT Games</strong> ("we", "us", or "our") handles data in connection with your download, installation, and use of our mobile game <strong>Pulsevania</strong> on Apple iOS and iPadOS devices.
+                    </p>
+                    <p data-tr="Gizliliğinize saygı duyuyoruz. Verilerinizin UK GDPR, EU GDPR ve Apple App Store Mağaza Kurallarına tam uyum içinde işlenmesini sağlıyoruz." data-en="We respect your privacy and are dedicated to ensuring that your personal data is handled responsibly and in full compliance with applicable privacy regulations, including UK GDPR, EU GDPR, and Apple App Store Review Guidelines.">
+                        We respect your privacy and are dedicated to ensuring that your personal data is handled responsibly and in full compliance with applicable privacy regulations, including the <strong>UK Data Protection Act 2018</strong>, the <strong>UK General Data Protection Regulation (UK GDPR)</strong>, EU GDPR, and Apple App Store Review Guidelines.
+                    </p>
+                </section>
+
+                <section>
+                    <h2><i data-lucide="database"></i> <span data-tr="2. Toplanan Bilgiler ve Veri Kullanımı" data-en="2. Information We Collect & How We Collect It">2. Information We Collect & How We Collect It</span></h2>
+                    <p data-tr="Pulsevania minimum veri toplama prensibiyle tasarlanmıştır. Oyunu oynamak için ad, soyad, e-posta veya telefon numarası vermeniz gerekmez." data-en="Pulsevania has been designed to minimise data collection. We do not require you to register an account, enter your real name, or provide your physical address or telephone number to play the game.">
+                        <strong>Pulsevania</strong> has been designed to minimise data collection. We do not require you to register an account, enter your real name, or provide your physical address or telephone number to play the game.
+                    </p>
+                    <ul>
+                        <li data-tr="Yerel Kayıt Verileri: Oyun ilerlemeniz, açılan eşyalarınız ve ses ayarlarınız doğrudan cihazınızda saklanır." data-en="Local Save Data: Your gameplay progress, unlocked equipment, game settings, and audio preferences are stored locally on your device.">
+                            <strong>Local Save Data:</strong> Your gameplay progress, unlocked equipment, game settings, and audio preferences are stored locally on your device.
+                        </li>
+                        <li data-tr="Apple Game Center Entegrasyonu (İsteğe Bağlı): Game Center'ı etkinleştirirseniz skor tabloları ve başarımlar Apple Gizlilik Politikasına uygun olarak işlenir." data-en="Apple Game Center Integration (Optional): If enabled, Game Center processes leaderboard scores and achievements under Apple's Privacy Policy.">
+                            <strong>Apple Game Center Integration (Optional):</strong> If you choose to enable Apple Game Center on your iOS device, Game Center may process your Apple ID alias, leaderboards, and achievements.
+                        </li>
+                        <li data-tr="Anonim Teknik Hata Raporları: Cihaz izin verirse, çökme raporları ve performans istatistikleri Apple App Store Connect aracılığıyla anonim olarak sunulur." data-en="Anonymised Technical Diagnostics: Apple provides aggregated, non-identifiable crash reports to help fix bugs.">
+                            <strong>Anonymised Technical Diagnostics:</strong> If permitted by your device settings, Apple provides us with aggregated, non-identifiable crash reports via App Store Connect.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2><i data-lucide="users"></i> <span data-tr="3. Üçüncü Taraf Hizmetleri & Paylaşım" data-en="3. Third-Party Services & Data Sharing">3. Third-Party Services & Data Sharing</span></h2>
+                    <p data-tr="Kişisel verilerinizi hiçbir üçüncü tarafa satmıyoruz veya pazarlama amacıyla paylaşmıyoruz." data-en="We do not sell, rent, or trade your personal data to third parties for monetary consideration or targeted marketing purposes.">
+                        We do not sell, rent, or trade your personal data to third parties for monetary consideration or targeted marketing purposes.
+                    </p>
+                    <p data-tr="Oyun yalnızca temel işlevler için Apple altyapısını kullanır:" data-en="The game interacts only with Apple infrastructure for core operations:">
+                        The game interacts only with Apple infrastructure for core operations:
+                    </p>
+                    <ul>
+                        <li data-tr="Apple App Store & TestFlight: Uygulama yüklemesi ve güncellemeleri için." data-en="Apple App Store & TestFlight: For application deployment, security verification, and update distribution.">Apple App Store & TestFlight: For application deployment, security verification, and update distribution.</li>
+                        <li data-tr="Apple Game Center: Skor tabloları ve başarım eşitlemesi için." data-en="Apple Game Center: For leaderboards and achievement syncing.">Apple Game Center: For leaderboards and achievement syncing.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2><i data-lucide="heart-handshake"></i> <span data-tr="4. Çocuk Gizliliği" data-en="4. Children's Privacy">4. Children's Privacy</span></h2>
+                    <p data-tr="Pulsevania genel izleyici kitlesine uygundur. COPPA ve Çocuk Kodları standartlarına sıkı bir şekilde uyuyoruz. 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamıyoruz." data-en="Pulsevania is suitable for general audiences. We comply strictly with UK Age-Appropriate Design Code and COPPA. We do not knowingly collect personal data from children under 13.">
+                        Pulsevania is suitable for general audiences. We comply strictly with the <strong>UK Age-Appropriate Design Code</strong> and <strong>COPPA</strong>. We do not knowingly solicit or collect personal data from children under the age of 13.
+                    </p>
+                </section>
+
+                <section>
+                    <h2><i data-lucide="mail"></i> <span data-tr="5. İletişim" data-en="5. Contact Us">5. Contact Us</span></h2>
+                    <p data-tr="Gizlilik politikamızla ilgili herhangi bir sorunuz veya talebiniz varsa ekibimizle iletişime geçebilirsiniz:" data-en="If you have any questions or requests regarding this Privacy Policy, please contact our team:">
+                        If you have any questions, concerns, or requests regarding this Privacy Policy, please contact our Data Protection Coordinator:
+                    </p>
+                    <div class="contact-card">
+                        <strong style="color: var(--text-main);">EKT Games Privacy Team</strong><br>
+                        Email: <a href="mailto:privacy@ektgames.com" style="color: var(--accent-secondary);">privacy@ektgames.com</a><br>
+                        Support Center: <a href="support.html" style="color: var(--accent-primary);">https://ektgames.com/games/pulsevania/support.html</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>
+                <a href="index.html" data-tr="Pulsevania Ana Sayfa" data-en="Pulsevania Home">Pulsevania Home</a> | 
+                <a href="privacy-choices.html" data-tr="Gizlilik Tercihleri" data-en="Privacy Choices">Privacy Choices</a> | 
+                <a href="support.html" data-tr="Destek" data-en="Support">Support</a> | 
+                <a href="../../index.html" data-tr="EKT Games Ana Sayfa" data-en="EKT Games">EKT Games</a>
+            </p>
+            <p style="margin-top: 10px;">&copy; 2026 EKT Games. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchLanguage(lang) {
+            localStorage.setItem('ekt_website_lang', lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-tr][data-en]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.childNodes.forEach(node => {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+                                node.textContent = ' ' + text + ' ';
+                            }
+                        });
+                    } else {
+                        el.innerText = text;
+                    }
+                }
+            });
+
+            document.querySelectorAll('[data-placeholder-tr][data-placeholder-en]').forEach(el => {
+                const ph = el.getAttribute(`data-placeholder-${lang}`);
+                if (ph) {
+                    el.setAttribute('placeholder', ph);
+                }
+            });
+
+            document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                if (btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        const savedLang = localStorage.getItem('ekt_website_lang') || 'en';
+        switchLanguage(savedLang);
+    </script>
+</body>
+</html>

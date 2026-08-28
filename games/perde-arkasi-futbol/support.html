@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perde Arkası Futbol - Destek & İletişim | EKT Games</title>
+    <meta name="description" content="Perde Arkası Futbol iOS oyunu için oyuncu desteği, SSS, geri bildirim ve iletişim sayfası.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../images/perde_arkasi_futbol_icon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-darker: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121f;
+            --accent-primary: #8b5cf6;
+            --accent-secondary: #06b6d4;
+            --accent-green: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --transition-smooth: all 0.3s ease;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-secondary);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 14px;
+            transition: var(--transition-smooth);
+        }
+
+        .back-link:hover {
+            color: #fff;
+            transform: translateX(-4px);
+        }
+
+        .main-content {
+            padding: 120px 0 80px 0;
+        }
+
+        .game-badge-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .game-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 2px solid var(--accent-secondary);
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 36px;
+        }
+
+        .support-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .support-card h3 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .support-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 16px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, var(--accent-primary), #6d28d9);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-appstore {
+            background: linear-gradient(135deg, #0071e3, #004085);
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="../../index.html" class="back-link">
+                    <i data-lucide="arrow-left"></i> EKT Games Ana Sayfa
+                </a>
+                <a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" class="btn btn-appstore" style="padding: 8px 16px; font-size: 13px;">
+                    <i data-lucide="apple"></i> App Store
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="game-badge-header">
+                <img src="../../images/perde_arkasi_futbol_icon.png" alt="Perde Arkası Futbol" class="game-icon">
+                <div>
+                    <h1 class="title">Perde Arkası Futbol</h1>
+                    <p style="color: var(--accent-secondary); font-weight: 600; font-family: var(--font-display); margin: 0;">Oyuncu Destek & Sıkça Sorulan Sorular</p>
+                </div>
+            </div>
+
+            <div class="support-card">
+                <h3><i data-lucide="mail" style="color: var(--accent-secondary);"></i> Bize Ulaşın</h3>
+                <p>Oyun içindeki teknik sorunlar, satın alım işlemleri veya önerileriniz için doğrudan destek ekibimize e-posta gönderebilirsiniz:</p>
+                <p style="font-size: 18px; font-family: var(--font-display); font-weight: 700; color: #fff;">
+                    <a href="mailto:ertugrulkaantemur@gmail.com" style="color: var(--accent-secondary); text-decoration: none;">
+                        ertugrulkaantemur@gmail.com
+                    </a>
+                </p>
+                <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 0;">(Gelen e-postalara genellikle 24 saat içinde yanıt verilmektedir.)</p>
+            </div>
+
+            <div class="support-card">
+                <h3><i data-lucide="help-circle" style="color: var(--accent-primary);"></i> Sıkça Sorulan Sorular (SSS)</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">1. Oyun verilerim ve kayıt dosyam (Save) nasıl saklanır?</div>
+                    <div class="faq-answer">Perde Arkası Futbol oyun verileriniz cihazınızın yerel depolama alanında güvenle saklanır. Uygulamayı silmediğiniz sürece ilerlemeniz korunur.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">2. Oyun internetsiz (çevrimdışı) oynanabilir mi?</div>
+                    <div class="faq-answer">Evet, menajerlik kariyerinizi ve kulüp yönetim mekaniklerini internet bağlantısı olmadan da rahatlıkla oynayabilirsiniz.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">3. Yeni ligler ve transfer güncellemeleri ne zaman gelir?</div>
+                    <div class="faq-answer">Düzenli sezon güncellemeleri ve yeni özellikler periyodik olarak App Store üzerinden yayınlanmaktadır. Otomatik güncellemeleri açık tutmanızı öneririz.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">4. Hata bildiriminde bulunmak istiyorum, ne yapmalıyım?</div>
+                    <div class="faq-answer">Cihaz modelinizi, iOS sürümünüzü ve karşılaştığınız hatanın ekran görüntüsünü <strong>ertugrulkaantemur@gmail.com</strong> adresine iletebilirsiniz.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EKT Games. Tüm hakları saklıdır. | Destek: ertugrulkaantemur@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

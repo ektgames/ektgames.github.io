@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsevania - Official Game Page | EKT Games</title>
+    <meta name="description" content="Pulsevania is an intense 2D action-platformer and dark fantasy adventure for iOS. Master fast combat, precision platforming, and epic boss fights.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-darker: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121f;
+            --bg-card-hover: #17172a;
+            --accent-primary: #8b5cf6;
+            --accent-secondary: #06b6d4;
+            --accent-red: #ef4444;
+            --accent-pink: #ec4899;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --transition-smooth: all 0.3s ease;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-primary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover {
+            color: var(--text-main);
+        }
+
+        /* LANGUAGE SWITCHER */
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        .lang-btn.active {
+            color: white;
+            background: var(--accent-red);
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+        }
+
+        .lang-divider {
+            color: var(--border-color);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 150px 0 80px 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .game-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 50px;
+            color: var(--accent-red);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(40px, 6vw, 68px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-red) 80%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2vw, 19px);
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-store-badge-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 28px;
+            background: #000;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .app-store-badge-btn:hover {
+            border-color: var(--accent-red);
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .app-store-badge-btn i {
+            font-size: 28px;
+        }
+
+        .badge-text-sub {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+
+        .badge-text-main {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* FEATURES */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 16px;
+            transition: var(--transition-smooth);
+        }
+
+        .feature-card:hover {
+            border-color: rgba(239, 68, 68, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--accent-red);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-display);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* SPECIFICATIONS */
+        .specs {
+            padding: 60px 0;
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .spec-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .spec-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .spec-val {
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 0;
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-red);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="sword"></i>
+                    </div>
+                    <span>EKT Games</span>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="../../index.html" class="nav-link" data-tr="Stüdyo Ana Sayfa" data-en="Studio Home">Studio Home</a></li>
+                        <li><a href="support.html" class="nav-link" data-tr="Destek & SSS" data-en="Support & FAQ">Support & FAQ</a></li>
+                        <li><a href="privacy-policy.html" class="nav-link" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="privacy-choices.html" class="nav-link" data-tr="Gizlilik Tercihleri" data-en="Privacy Choices">Privacy Choices</a></li>
+                    </ul>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" data-lang-btn="tr" onclick="switchLanguage('tr')">TR</button>
+                        <span class="lang-divider">|</span>
+                        <button class="lang-btn active" data-lang-btn="en" onclick="switchLanguage('en')">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div style="margin-bottom: 20px;">
+                    <img src="../../images/pulsevania_icon.png" alt="Pulsevania App Icon" style="width: 140px; height: 140px; border-radius: 28px; box-shadow: 0 15px 35px rgba(239, 68, 68, 0.4), 0 0 25px rgba(139, 92, 246, 0.3); border: 2px solid rgba(239, 68, 68, 0.6);">
+                </div>
+                <div class="game-badge">
+                    <i data-lucide="flame" style="width: 14px;"></i> <span data-tr="iOS İçin Yayında" data-en="Available on iOS">Available on iOS</span>
+                </div>
+                <h1 class="hero-title">Pulsevania</h1>
+                <p class="hero-subtitle" data-tr="Pulsevania'nın karanlık dünyasına adım atın! Hızlı dövüşlerde ustalaşın, tehlikeli platformları aşın, destansı patronları yenin ve antik sırları çözün." data-en="Step into the dark realm of Pulsevania! Master fast-paced combat, conquer deadly platforming challenges, defeat epic bosses, and unveil ancient secrets in this dark fantasy action-platformer.">
+                    Step into the dark realm of Pulsevania! Master fast-paced combat, conquer deadly platforming challenges, defeat epic bosses, and unveil ancient secrets in this dark fantasy action-platformer.
+                </p>
+
+                <a href="#" class="app-store-badge-btn">
+                    <i data-lucide="apple"></i>
+                    <div style="text-align: left;">
+                        <div class="badge-text-sub" data-tr="App Store'dan" data-en="Download on the">Download on the</div>
+                        <div class="badge-text-main">App Store</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-tr="Öne Çıkan Özellikler" data-en="Key Game Features">Key Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="zap"></i></div>
+                    <h3 data-tr="Hızlı ve Akıcı Dövüşler" data-en="Fast-Paced Combat">Fast-Paced Combat</h3>
+                    <p data-tr="Acımasız düşmanlara karşı gerçek zamanlı savaşlara girin. Saldırılarınızı zamanlayın ve kılıcınızda ustalaşın." data-en="Engage in visceral real-time battles against brutal enemies. Master your blade timing and dodge lethal counterstrikes.">Engage in visceral real-time battles against brutal enemies. Master your blade timing and dodge lethal counterstrikes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="footprints"></i></div>
+                    <h3 data-tr="Hassas Platform Dinamikleri" data-en="Precision Platforming">Precision Platforming</h3>
+                    <p data-tr="Hızlı ve duyarlı kontrollerle karmaşık, tehlikeli bölümlerde ilerleyin. Duvardan zıplayın ve ölümcül tuzakları aşın." data-en="Navigate complex, hazardous environments with tight, responsive touch and controller movement mechanics.">Navigate complex, hazardous environments with tight, responsive touch and controller movement mechanics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="skull"></i></div>
+                    <h3 data-tr="Destansı Patron Savaşları" data-en="Epic Boss Encounters">Epic Boss Encounters</h3>
+                    <p data-tr="Strateji, sabır ve kesin zamanlama gerektiren zorlu patronlarla yüzleşin. Saldırı kalıplarını öğrenip zafer kazanın." data-en="Face formidable high-stakes bosses requiring strategic timing, pattern learning, and precise execution.">Face formidable high-stakes bosses requiring strategic timing, pattern learning, and precise execution.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="compass"></i></div>
+                    <h3 data-tr="Keşfedilebilir Dünya & Gizemler" data-en="Interconnected World">Interconnected World</h3>
+                    <p data-tr="El yapımı geniş bölümleri keşfederken gizli odaları, geçitleri ve değerli eserleri açığa çıkarın." data-en="Uncover secret chambers, hidden passages, and valuable artifacts across handcrafted atmospheric levels.">Uncover secret chambers, hidden passages, and valuable artifacts across handcrafted atmospheric levels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIFICATIONS -->
+    <section class="specs">
+        <div class="container">
+            <div class="specs-grid">
+                <div class="spec-box">
+                    <div class="spec-label" data-tr="Platform" data-en="Platform">Platform</div>
+                    <div class="spec-val">iOS / iPadOS</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-label" data-tr="Uyumluluk" data-en="Compatibility">Compatibility</div>
+                    <div class="spec-val" data-tr="iOS 14.0 ve üzeri" data-en="iOS 14.0 or later">iOS 14.0 or later</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-label" data-tr="Tür" data-en="Genre">Genre</div>
+                    <div class="spec-val" data-tr="Aksiyon / Platform" data-en="Action / Platformer">Action / Platformer</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-label" data-tr="Geliştirici" data-en="Developer">Developer</div>
+                    <div class="spec-val">EKT Games</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../../index.html" data-tr="Stüdyo Web Sitesi" data-en="Studio Website">Studio Website</a>
+                <a href="privacy-policy.html" data-tr="Gizlilik Politikası" data-en="Privacy Policy (UK English)">Privacy Policy (UK English)</a>
+                <a href="privacy-choices.html" data-tr="Gizlilik Tercihleri" data-en="User Privacy Choices">User Privacy Choices</a>
+                <a href="support.html" data-tr="Destek Merkezi" data-en="Support Center">Support Center</a>
+            </div>
+            <p>&copy; 2026 EKT Games. <span data-tr="Tüm hakları saklıdır. Pulsevania, EKT Games'in tescilli markasıdır." data-en="All rights reserved. Pulsevania is a registered trademark of EKT Games.">All rights reserved. Pulsevania is a registered trademark of EKT Games.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchLanguage(lang) {
+            localStorage.setItem('ekt_website_lang', lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-tr][data-en]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.childNodes.forEach(node => {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+                                node.textContent = ' ' + text + ' ';
+                            }
+                        });
+                    } else {
+                        el.innerText = text;
+                    }
+                }
+            });
+
+            document.querySelectorAll('[data-placeholder-tr][data-placeholder-en]').forEach(el => {
+                const ph = el.getAttribute(`data-placeholder-${lang}`);
+                if (ph) {
+                    el.setAttribute('placeholder', ph);
+                }
+            });
+
+            document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                if (btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize language
+        const savedLang = localStorage.getItem('ekt_website_lang') || 'en';
+        switchLanguage(savedLang);
+    </script>
+</body>
+</html>

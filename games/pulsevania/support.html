@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsevania - Player Support & FAQ | EKT Games</title>
+    <meta name="description" content="Player support, troubleshooting guides, FAQ, and contact information for Pulsevania on iOS.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-darker: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121f;
+            --accent-primary: #8b5cf6;
+            --accent-secondary: #06b6d4;
+            --accent-red: #ef4444;
+            --accent-green: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --transition-smooth: all 0.3s ease;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-primary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover {
+            color: var(--text-main);
+        }
+
+        /* LANGUAGE SWITCHER */
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        .lang-btn.active {
+            color: white;
+            background: var(--accent-red);
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+        }
+
+        .lang-divider {
+            color: var(--border-color);
+        }
+
+        .support-wrapper {
+            padding: 130px 0 80px 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-badge {
+            display: inline-block;
+            padding: 4px 14px;
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 50px;
+            color: var(--accent-secondary);
+            font-size: 12px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 5vw, 46px);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* FAQ SECTION */
+        .faq-section {
+            margin-bottom: 50px;
+        }
+
+        .section-heading {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .faq-question {
+            font-family: var(--font-display);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--accent-secondary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* CONTACT CARD */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(18, 18, 31, 0.9) 0%, rgba(23, 23, 42, 0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-box h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--accent-red) 0%, #b91c1c 100%);
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+        }
+
+        footer {
+            padding: 30px 0;
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="help-circle"></i>
+                    </div>
+                    <span>Pulsevania</span>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link" data-tr="Oyun Sayfası" data-en="Game Page">Game Page</a></li>
+                        <li><a href="privacy-policy.html" class="nav-link" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="privacy-choices.html" class="nav-link" data-tr="Gizlilik Tercihleri" data-en="Privacy Choices">Privacy Choices</a></li>
+                        <li><a href="../../index.html" class="nav-link" data-tr="Stüdyo Ana Sayfa" data-en="EKT Games Home">EKT Games Home</a></li>
+                    </ul>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" data-lang-btn="tr" onclick="switchLanguage('tr')">TR</button>
+                        <span class="lang-divider">|</span>
+                        <button class="lang-btn active" data-lang-btn="en" onclick="switchLanguage('en')">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="support-wrapper">
+        <div class="container">
+            <div class="page-header">
+                <span class="page-badge" data-tr="Oyuncu Destek Merkezi" data-en="Player Support Center">Player Support Center</span>
+                <h1 class="page-title" data-tr="Nasıl yardımcı olabiliriz?" data-en="How can we help?">How can we help?</h1>
+                <p class="page-subtitle" data-tr="Sıkça sorulan soruların yanıtlarını, teknik sorun giderme rehberlerini ve geliştirici iletişim bilgilerini burada bulabilirsiniz." data-en="Find solutions to common questions, gameplay guides, technical troubleshooting, and direct support assistance.">Find solutions to common questions, gameplay guides, technical troubleshooting, and direct support assistance.</p>
+            </div>
+
+            <!-- FAQ SECTION -->
+            <div class="faq-section">
+                <h2 class="section-heading"><i data-lucide="message-square-code"></i> <span data-tr="Sıkça Sorulan Sorular (SSS)" data-en="Frequently Asked Questions">Frequently Asked Questions</span></h2>
+
+                <div class="faq-item">
+                    <div class="faq-question"><i data-lucide="save"></i> <span data-tr="Oyun kaydım nasıl saklanıyor?" data-en="How is my save data stored?">How is my save data stored?</span></div>
+                    <div class="faq-answer" data-tr="Pulsevania ilerlemenizi otomatik olarak iOS cihazınızın hafızasında saklar. İlerlemeniz kayıt noktalarında, oda geçişlerinde ve patron savaşları sonrasında kaydedilir." data-en="Pulsevania automatically saves your progress locally on your iOS device. Progress is saved at checkpoints, room transitions, and upon defeating major bosses.">
+                        Pulsevania automatically saves your progress locally on your iOS device. Progress is saved at checkpoints, room transitions, and upon defeating major bosses.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><i data-lucide="gamepad-2"></i> <span data-tr="Pulsevania oyun kontrolcülerini destekliyor mu?" data-en="Does Pulsevania support game controllers?">Does Pulsevania support game controllers?</span></div>
+                    <div class="faq-answer" data-tr="Evet! Pulsevania; MFi (Made for iPhone), Xbox Kablosuz Kontrolcü ve PlayStation DualSense / DualShock 4 kontrolcülerini tam olarak destekler." data-en="Yes! Pulsevania supports MFi (Made for iPhone) controllers, Xbox Wireless Controllers, and PlayStation DualSense/DualShock 4 controllers paired via Bluetooth to your iOS device.">
+                        Yes! Pulsevania supports MFi (Made for iPhone) controllers, Xbox Wireless Controllers, and PlayStation DualSense/DualShock 4 controllers paired via Bluetooth to your iOS device.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><i data-lucide="zap-off"></i> <span data-tr="Oyun takılıyor veya çöküyor. Performansı nasıl artırabilirim?" data-en="The game is lagging or crashing. How can I improve performance?">The game is lagging or crashing. How can I improve performance?</span></div>
+                    <div class="faq-answer" data-tr="Cihazınızın iOS 14.0 veya üzeri bir sürümde çalıştığından emin olun. Arka plandaki uygulamaları kapatın ve Düşük Güç Modu'nun kapalı olduğunu kontrol edip cihazınızı yeniden başlatın." data-en="Ensure your device is running iOS 14.0 or later. Close background applications to free up RAM, check that Low Power Mode is disabled, and restart your iOS device.">
+                        Ensure your device is running iOS 14.0 or later. Close background applications to free up RAM, check that Low Power Mode is disabled, and restart your iOS device.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><i data-lucide="rotate-ccw"></i> <span data-tr="App Store satın alımı için nasıl iade talebinde bulunabilirim?" data-en="How do I request a refund for an App Store purchase?">How do I request a refund for an App Store purchase?</span></div>
+                    <div class="faq-answer" data-tr="Tüm ödeme işlemleri doğrudan Apple tarafından yönetilmektedir. İade talebinde bulunmak için Apple'ın resmi portali olan reportaproblem.apple.com adresini ziyaret edebilirsiniz." data-en="All financial transactions and billing are handled directly by Apple. To request a refund, please visit Apple's official portal at reportaproblem.apple.com.">
+                        All financial transactions and billing are handled directly by Apple. To request a refund, please visit Apple's official portal at <a href="https://reportaproblem.apple.com" target="_blank" style="color: var(--accent-secondary);">reportaproblem.apple.com</a>.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><i data-lucide="bug"></i> <span data-tr="Bir hatayı (bug) nasıl bildirebilirim?" data-en="How do I report a bug or issue?">How do I report a bug or issue?</span></div>
+                    <div class="faq-answer" data-tr="Bir hatayla karşılaşırsanız cihaz modelinizi, iOS sürümünüzü ve hatanın kısa bir açıklamasını support@ektgames.com adresine e-posta ile gönderebilirsiniz." data-en="If you encounter a bug, glitch, or unexpected behavior in Pulsevania, please email our developer team at support@ektgames.com with your device model, iOS version, and a brief description of the issue.">
+                        If you encounter a bug, glitch, or unexpected behavior in Pulsevania, please email our developer team at <strong>support@ektgames.com</strong> with your device model, iOS version, and a brief description of the issue.
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIRECT CONTACT -->
+            <div class="contact-box">
+                <h3 data-tr="Hala yardıma mı ihtiyacınız var?" data-en="Still need assistance?">Still need assistance?</h3>
+                <p data-tr="Destek ekibimiz tekrar oyuna dönmeniz için yardıma hazır. Bize bir e-posta gönderin, en kısa sürede yanıtlayalım." data-en="Our support team is here to help you get back into the action. Send us a message and we'll reply as soon as possible.">Our support team is here to help you get back into the action. Send us a message and we'll reply as soon as possible.</p>
+                <a href="mailto:support@ektgames.com?subject=Pulsevania%20Support%20Request" class="btn-contact">
+                    <i data-lucide="mail"></i> <span data-tr="Oyuncu Destek Ekibine Yazın" data-en="Contact Player Support">Contact Player Support</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="index.html" data-tr="Pulsevania Ana Sayfa" data-en="Pulsevania Home">Pulsevania Home</a> | 
+                <a href="privacy-policy.html" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Privacy Policy</a> | 
+                <a href="privacy-choices.html" data-tr="Gizlilik Tercihleri" data-en="Privacy Choices">Privacy Choices</a> | 
+                <a href="../../index.html" data-tr="EKT Games Ana Sayfa" data-en="EKT Games">EKT Games</a>
+            </p>
+            <p style="margin-top: 10px;">&copy; 2026 EKT Games. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchLanguage(lang) {
+            localStorage.setItem('ekt_website_lang', lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-tr][data-en]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.childNodes.forEach(node => {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+                                node.textContent = ' ' + text + ' ';
+                            }
+                        });
+                    } else {
+                        el.innerText = text;
+                    }
+                }
+            });
+
+            document.querySelectorAll('[data-placeholder-tr][data-placeholder-en]').forEach(el => {
+                const ph = el.getAttribute(`data-placeholder-${lang}`);
+                if (ph) {
+                    el.setAttribute('placeholder', ph);
+                }
+            });
+
+            document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                if (btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        const savedLang = localStorage.getItem('ekt_website_lang') || 'en';
+        switchLanguage(savedLang);
+    </script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsevania - User Privacy Choices | EKT Games</title>
+    <meta name="description" content="Manage your privacy preferences, App Tracking Transparency settings, and data control rights for Pulsevania on iOS.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-darker: #050508;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121f;
+            --accent-primary: #8b5cf6;
+            --accent-secondary: #06b6d4;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --transition-smooth: all 0.3s ease;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover {
+            color: var(--text-main);
+        }
+
+        /* LANGUAGE SWITCHER */
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        .lang-btn.active {
+            color: white;
+            background: var(--accent-red);
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+        }
+
+        .lang-divider {
+            color: var(--border-color);
+        }
+
+        .choices-wrapper {
+            padding: 130px 0 80px 0;
+        }
+
+        .page-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(30px, 4vw, 42px);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .choice-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 24px;
+            transition: var(--transition-smooth);
+        }
+
+        .choice-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .choice-title {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .choice-title i {
+            color: var(--accent-secondary);
+        }
+
+        .choice-desc {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .steps-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .steps-box ol {
+            margin-left: 20px;
+        }
+
+        .steps-box li {
+            margin-bottom: 6px;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--accent-primary);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 14px;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-action:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 30px 0;
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="sliders"></i>
+                    </div>
+                    <span>Pulsevania</span>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link" data-tr="Oyun Sayfası" data-en="Game Page">Game Page</a></li>
+                        <li><a href="privacy-policy.html" class="nav-link" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="support.html" class="nav-link" data-tr="Destek" data-en="Support">Support</a></li>
+                        <li><a href="../../index.html" class="nav-link" data-tr="Stüdyo Ana Sayfa" data-en="EKT Games Home">EKT Games Home</a></li>
+                    </ul>
+                    <div class="lang-switcher">
+                        <button class="lang-btn" data-lang-btn="tr" onclick="switchLanguage('tr')">TR</button>
+                        <span class="lang-divider">|</span>
+                        <button class="lang-btn active" data-lang-btn="en" onclick="switchLanguage('en')">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="choices-wrapper">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title" data-tr="Gizlilik Tercihleriniz" data-en="Your Privacy Choices">Your Privacy Choices</h1>
+                <p class="page-subtitle" data-tr="Pulsevania oyununda verilerinizi nasıl kontrol edeceğinizi ve izinleri nasıl yöneteceğinizi öğrenin." data-en="Understand how to control your data, manage permissions, and exercise your privacy rights for Pulsevania on iOS.">Understand how to control your data, manage permissions, and exercise your privacy rights for Pulsevania on iOS.</p>
+            </div>
+
+            <!-- CHOICE 1: ATT -->
+            <div class="choice-card">
+                <h2 class="choice-title"><i data-lucide="smartphone"></i> <span data-tr="iOS Uygulama Takibi İzinleri (ATT)" data-en="iOS App Tracking Transparency (ATT)">iOS App Tracking Transparency (ATT)</span></h2>
+                <p class="choice-desc" data-tr="iOS 14.5 ve üzeri sürümlerde, takip tercihlerinizi dilediğiniz zaman iOS cihaz ayarlarınızdan değiştirebilirsiniz." data-en="On iOS 14.5 or later, you can change your tracking preferences at any time directly through your iOS device settings.">
+                    On iOS 14.5 or later, Apple requires apps to ask for your permission before tracking your activity across other companies' apps or websites. You can change your tracking preferences at any time directly through your iOS device settings.
+                </p>
+                <div class="steps-box">
+                    <strong data-tr="iPhone veya iPad cihazınızda izinleri değiştirmek için:" data-en="To change tracking permissions on iPhone or iPad:">To change tracking permissions on iPhone or iPad:</strong>
+                    <ol>
+                        <li data-tr="Cihazınızda Ayarlar uygulamasını açın." data-en="Open the Settings app on your Apple device.">Open the Settings app on your Apple device.</li>
+                        <li data-tr="Gizlilik ve Güvenlik > Takip bölümüne gidin." data-en="Tap Privacy & Security > Tracking.">Tap Privacy & Security &gt; Tracking.</li>
+                        <li data-tr="Pulsevania için izni AÇIK veya KAPALI olarak ayarlayın." data-en="Toggle permission for Pulsevania ON or OFF according to your preference.">Toggle permission for Pulsevania ON or OFF according to your preference.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- CHOICE 2: GAME CENTER -->
+            <div class="choice-card">
+                <h2 class="choice-title"><i data-lucide="trophy"></i> <span data-tr="Apple Game Center Gizliliği" data-en="Apple Game Center Privacy">Apple Game Center Privacy</span></h2>
+                <p class="choice-desc" data-tr="Skor tabloları ve başarımlar için Apple Game Center kullanıyorsanız, profil görünürlüğünüzü Apple ID ayarlarınızdan yönetebilirsiniz." data-en="If you use Apple Game Center for score leaderboards or achievements in Pulsevania, your profile visibility is controlled by your Apple ID account settings.">
+                    If you use Apple Game Center for score leaderboards or achievements in Pulsevania, your profile visibility is controlled by your Apple ID account settings.
+                </p>
+                <div class="steps-box">
+                    <strong data-tr="Game Center profil gizliliğini yönetmek için:" data-en="To manage Game Center profile privacy:">To manage Game Center profile privacy:</strong>
+                    <ol>
+                        <li data-tr="iOS cihazınızda Ayarlar'ı açın." data-en="Open Settings on your iOS device.">Open Settings on your iOS device.</li>
+                        <li data-tr="Game Center sekmesine dokunun." data-en="Scroll down and tap Game Center.">Scroll down and tap Game Center.</li>
+                        <li data-tr="Profil Gizliliği seçeneğini (Herkes, Sadece Arkadaşlar veya Yalnızca Siz) güncelleyin." data-en="Adjust Profile Privacy (Everyone, Friends Only, or Only You).">Adjust Profile Privacy (Everyone, Friends Only, or Only You).</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- CHOICE 3: LOCAL DATA DELETION -->
+            <div class="choice-card">
+                <h2 class="choice-title"><i data-lucide="trash-2"></i> <span data-tr="Yerel Oyun Kaydı ve Veri Sıfırlama" data-en="Local Game Save & Data Removal">Local Game Save & Data Removal</span></h2>
+                <p class="choice-desc" data-tr="Tüm kayıt dosyaları ve oyuncu istatistikleri doğrudan cihazınızın hafızasında saklanır." data-en="All save files, player statistics, and custom configurations are stored locally on your device storage.">
+                    All save files, player statistics, and custom configurations are stored locally on your device storage.
+                </p>
+                <div class="steps-box">
+                    <strong data-tr="Cihazınızdaki tüm yerel verileri tamamen silmek için:" data-en="To completely remove all local data:">To completely remove all local data:</strong>
+                    <p data-tr="Pulsevania uygulama simgesine basılı tutun, Uygulamayı Kaldır seçeneğine ve ardından Uygulamayı Sil'e dokunun." data-en="Simply press and hold the Pulsevania app icon on your iOS home screen, tap Remove App, and confirm Delete App. This permanently purges all local save data.">Simply press and hold the Pulsevania app icon on your iOS home screen, tap Remove App, and confirm Delete App. This permanently purges all local save data.</p>
+                </div>
+            </div>
+
+            <!-- CHOICE 4: DATA INQUIRY / OPT-OUT REQUEST -->
+            <div class="choice-card">
+                <h2 class="choice-title"><i data-lucide="mail"></i> <span data-tr="EKT Games'e Gizlilik Talebi Gönderin" data-en="Submit a Data Request to EKT Games">Submit a Data Request to EKT Games</span></h2>
+                <p class="choice-desc" data-tr="Gizlilik tercihlerinizle ilgili sorularınız varsa veya resmi bir veri talebinde bulunmak isterseniz ekibimiz size yardımcı olmaktan mutluluk duyar." data-en="If you have questions about your privacy choices or wish to formally submit a privacy request, our team is available to assist you.">
+                    If you have questions about your privacy choices or wish to formally submit a privacy request, our team is available to assist you.
+                </p>
+                <a href="mailto:privacy@ektgames.com?subject=Pulsevania%20Privacy%20Request" class="btn-action">
+                    <i data-lucide="send"></i> <span data-tr="Gizlilik Ekibine E-posta Gönder" data-en="Email Privacy Team">Email Privacy Team</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="index.html" data-tr="Pulsevania Ana Sayfa" data-en="Pulsevania Home">Pulsevania Home</a> | 
+                <a href="privacy-policy.html" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Privacy Policy</a> | 
+                <a href="support.html" data-tr="Destek" data-en="Support">Support</a> | 
+                <a href="../../index.html" data-tr="EKT Games Ana Sayfa" data-en="EKT Games">EKT Games</a>
+            </p>
+            <p style="margin-top: 10px;">&copy; 2026 EKT Games. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchLanguage(lang) {
+            localStorage.setItem('ekt_website_lang', lang);
+            document.documentElement.lang = lang;
+            
+            document.querySelectorAll('[data-tr][data-en]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.childNodes.forEach(node => {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+                                node.textContent = ' ' + text + ' ';
+                            }
+                        });
+                    } else {
+                        el.innerText = text;
+                    }
+                }
+            });
+
+            document.querySelectorAll('[data-placeholder-tr][data-placeholder-en]').forEach(el => {
+                const ph = el.getAttribute(`data-placeholder-${lang}`);
+                if (ph) {
+                    el.setAttribute('placeholder', ph);
+                }
+            });
+
+            document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                if (btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        const savedLang = localStorage.getItem('ekt_website_lang') || 'en';
+        switchLanguage(savedLang);
+    </script>
+</body>
+</html>
