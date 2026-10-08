@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title id="page-title">EKT Games | Bağımsız Oyun Geliştirme Stüdyosu</title>
-    <meta name="description" id="page-meta-desc" content="EKT Games; Perde Arkası Futbol ve Farm2Shelf gibi sürükleyici simülasyon, menajerlik ve strateji oyunları geliştiren bağımsız oyun stüdyosudur.">
+    <meta name="description" id="page-meta-desc" content="EKT Games; Perde Arkası Futbol, Farm2Shelf, Conquerra ve TerraTactix gibi sürükleyici simülasyon, menajerlik ve strateji oyunları geliştiren bağımsız oyun stüdyosudur.">
     <meta name="theme-color" content="#0a0a0f">
     
     <!-- Favicon -->
@@ -175,6 +175,30 @@
 
         .btn-green:hover {
             box-shadow: 0 6px 30px rgba(16, 185, 129, 0.6);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .btn-amber {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-amber:hover {
+            box-shadow: 0 6px 30px rgba(245, 158, 11, 0.6);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .btn-blue {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.35);
+        }
+
+        .btn-blue:hover {
+            box-shadow: 0 6px 30px rgba(59, 130, 246, 0.6);
             transform: translateY(-2px);
             color: #ffffff;
         }
@@ -650,9 +674,9 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 32px;
-            max-width: 960px;
+            max-width: 100%;
             margin: 0 auto;
             position: relative;
             z-index: 2;
@@ -1380,7 +1404,7 @@
             <div class="stats-container">
                 <div class="stats-bar">
                     <div class="stat-item">
-                        <div class="stat-number">2</div>
+                        <div class="stat-number">4</div>
                         <div class="stat-label" data-tr="Aktif Proje" data-en="Active Projects">Aktif Proje</div>
                     </div>
                     <div class="stat-item">
@@ -1505,8 +1529,8 @@
                     <div class="game-img-wrapper">
                         <img src="images/farm2shelf_icon.jpg" alt="Farm2Shelf" class="game-img">
                         <div class="game-card-overlay"></div>
-                        <span class="game-status-badge" style="border-color: var(--accent-green); color: var(--accent-green);" data-tr="Yakında Çıkacak" data-en="Coming Soon">
-                            <i data-lucide="clock"></i> <span class="translatable">Yakında Çıkacak</span>
+                        <span class="game-status-badge" style="border-color: var(--accent-green); color: var(--accent-green);" data-tr="iOS App Store'da Yayında" data-en="Live on iOS App Store">
+                            <i data-lucide="apple"></i> <span class="translatable">iOS App Store'da Yayında</span>
                         </span>
                     </div>
                     <div class="game-content">
@@ -1520,10 +1544,70 @@
                             Tarladan raflara uzanan üretim ve perakende zinciri! Kendi mahsullerinizi ekip hasat edin, atölyelerde işleyerek katma değerli ürünlere dönüştürün, mağazanızı dekore edin ve toptan & online pazar siparişleriyle ticaret imparatorluğunuzu büyütün.
                         </p>
                         <div class="game-actions">
-                            <button class="btn btn-green btn-sm details-btn" data-game="farm2shelf" data-tr="Detayları İncele" data-en="Explore Details">
+                            <a href="https://apps.apple.com/ar/app/farm2shelf/id6802213999" target="_blank" rel="noopener noreferrer" class="btn btn-appstore btn-sm" data-tr="App Store'da İndir" data-en="Download on App Store">
+                                <i data-lucide="apple"></i> <span class="translatable">App Store'da İndir</span>
+                            </a>
+                            <button class="btn btn-secondary btn-sm details-btn" data-game="farm2shelf" data-tr="Detaylar" data-en="Details">
+                                <i data-lucide="info"></i> <span class="translatable">Detaylar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. CONQUERRA -->
+                <div class="game-card" style="--hover-color: var(--accent-amber); --hover-glow: 0 0 30px rgba(245, 158, 11, 0.3);">
+                    <div class="game-img-wrapper" style="background: #3d4a32;">
+                        <img src="images/conquerra_icon.jpg" alt="Conquerra" class="game-img" style="object-fit: contain;">
+                        <div class="game-card-overlay"></div>
+                        <span class="game-status-badge" style="border-color: var(--accent-amber); color: var(--accent-amber);" data-tr="Yakında Çıkacak" data-en="Coming Soon">
+                            <i data-lucide="clock"></i> <span class="translatable">Yakında Çıkacak</span>
+                        </span>
+                    </div>
+                    <div class="game-content">
+                        <div class="game-tags">
+                            <span class="game-tag" data-tr="Strateji" data-en="Strategy">Strateji</span>
+                            <span class="game-tag" data-tr="Tahta Savaşı" data-en="Board Battle">Tahta Savaşı</span>
+                            <span class="game-tag" data-tr="Dört Irk" data-en="Four Factions">Dört Irk</span>
+                        </div>
+                        <h3 class="game-title">Conquerra</h3>
+                        <p class="game-desc" data-tr="Dört ırk, tek taş tahta. Köşenden ordunu kare kare yürüt; düşman karesine girdiğinde yığınlar ikiye ayrılır ve savaş o karenin içinde çözülür. Kazanan toprak alır, kalan menziliyle yürüyüşüne devam eder." data-en="Four factions, one stone board. March your army square by square from your corner. Step onto an enemy tile and the stacks split, settling the fight on that square. The winner holds the ground and keeps moving with whatever range remains.">
+                            Dört ırk, tek taş tahta. Köşenden ordunu kare kare yürüt; düşman karesine girdiğinde yığınlar ikiye ayrılır ve savaş o karenin içinde çözülür. Kazanan toprak alır, kalan menziliyle yürüyüşüne devam eder.
+                        </p>
+                        <div class="game-actions">
+                            <button class="btn btn-amber btn-sm details-btn" data-game="conquerra" data-tr="Detayları İncele" data-en="Explore Details">
                                 <i data-lucide="sparkles"></i> <span class="translatable">Detayları İncele</span>
                             </button>
-                            <a href="#contact" class="btn btn-secondary btn-sm select-game-link" data-select-game="farm2shelf" data-tr="Geri Bildirim" data-en="Feedback">
+                            <a href="#contact" class="btn btn-secondary btn-sm select-game-link" data-select-game="conquerra" data-tr="Geri Bildirim" data-en="Feedback">
+                                <i data-lucide="mail"></i> <span class="translatable">Geri Bildirim</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. TERRATACTIX -->
+                <div class="game-card" style="--hover-color: var(--accent-blue); --hover-glow: 0 0 30px rgba(59, 130, 246, 0.3);">
+                    <div class="game-img-wrapper" style="background: #7ec8f0;">
+                        <img src="images/terratactix_icon.png" alt="TerraTactix" class="game-img" style="object-fit: contain;">
+                        <div class="game-card-overlay"></div>
+                        <span class="game-status-badge" style="border-color: var(--accent-blue); color: var(--accent-blue);" data-tr="Yakında Çıkacak" data-en="Coming Soon">
+                            <i data-lucide="clock"></i> <span class="translatable">Yakında Çıkacak</span>
+                        </span>
+                    </div>
+                    <div class="game-content">
+                        <div class="game-tags">
+                            <span class="game-tag" data-tr="Bulmaca" data-en="Puzzle">Bulmaca</span>
+                            <span class="game-tag" data-tr="Toprak Fetih" data-en="Territory Conquest">Toprak Fetih</span>
+                            <span class="game-tag" data-tr="Tek Oyunculu" data-en="Single Player">Tek Oyunculu</span>
+                        </div>
+                        <h3 class="game-title">TerraTactix</h3>
+                        <p class="game-desc" data-tr="Sevimli, kurgusal bir gezegende küçük bir topraktan başla. Haritada bağlı bölgeleri aç, seferlere çık ve düşen blok bulmacalarını çözerek yeni toprakları fethet." data-en="Start with a small patch of a cute fictional planet. Open connected lands on the world map, launch expeditions, and conquer new territory by clearing falling-block puzzle battles.">
+                            Sevimli, kurgusal bir gezegende küçük bir topraktan başla. Haritada bağlı bölgeleri aç, seferlere çık ve düşen blok bulmacalarını çözerek yeni toprakları fethet.
+                        </p>
+                        <div class="game-actions">
+                            <button class="btn btn-blue btn-sm details-btn" data-game="terratactix" data-tr="Detayları İncele" data-en="Explore Details">
+                                <i data-lucide="sparkles"></i> <span class="translatable">Detayları İncele</span>
+                            </button>
+                            <a href="#contact" class="btn btn-secondary btn-sm select-game-link" data-select-game="terratactix" data-tr="Geri Bildirim" data-en="Feedback">
                                 <i data-lucide="mail"></i> <span class="translatable">Geri Bildirim</span>
                             </a>
                         </div>
@@ -1594,6 +1678,8 @@
                             <option value="none" data-tr="Seçiniz..." data-en="Select...">Seçiniz...</option>
                             <option value="perde-arkasi-futbol" data-tr="Perde Arkası Futbol" data-en="Behind the Scenes Football">Perde Arkası Futbol</option>
                             <option value="farm2shelf" data-tr="Farm2Shelf" data-en="Farm2Shelf">Farm2Shelf</option>
+                            <option value="conquerra" data-tr="Conquerra" data-en="Conquerra">Conquerra</option>
+                            <option value="terratactix" data-tr="TerraTactix" data-en="TerraTactix">TerraTactix</option>
                             <option value="general" data-tr="Genel İletişim / İş Birliği" data-en="General Inquiry / Partnership">Genel İletişim / İş Birliği</option>
                         </select>
                     </div>
@@ -1633,7 +1719,9 @@
                     <h4 data-tr="OYUNLARIMIZ" data-en="OUR GAMES">OYUNLARIMIZ</h4>
                     <ul class="footer-links">
                         <li><a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" data-tr="Perde Arkası Futbol (iOS)" data-en="Behind the Scenes Football (iOS)">Perde Arkası Futbol (iOS)</a></li>
-                        <li><a href="#projects" onclick="openGameModalFromKey('farm2shelf')" data-tr="Farm2Shelf (Yakında)" data-en="Farm2Shelf (Coming Soon)">Farm2Shelf (Yakında)</a></li>
+                        <li><a href="https://apps.apple.com/ar/app/farm2shelf/id6802213999" target="_blank" rel="noopener noreferrer" data-tr="Farm2Shelf (iOS)" data-en="Farm2Shelf (iOS)">Farm2Shelf (iOS)</a></li>
+                        <li><a href="#projects" onclick="openGameModalFromKey('conquerra')" data-tr="Conquerra (Yakında)" data-en="Conquerra (Coming Soon)">Conquerra (Yakında)</a></li>
+                        <li><a href="#projects" onclick="openGameModalFromKey('terratactix')" data-tr="TerraTactix (Yakında)" data-en="TerraTactix (Coming Soon)">TerraTactix (Yakında)</a></li>
                         <li><a href="#contact" data-tr="Oyuncu Desteği" data-en="Player Support">Oyuncu Desteği</a></li>
                     </ul>
                 </div>
@@ -1810,7 +1898,7 @@
             farm2shelf: {
                 tr: {
                     title: "Farm2Shelf",
-                    badge: "Geliştirilme Aşamasında • Yakında Çıkacak",
+                    badge: "iOS App Store'da Yayında",
                     color: "var(--accent-green)",
                     badgeColor: "rgba(16, 185, 129, 0.15)",
                     desc: "Tarlada ekilen tohumdan raflardaki gurme ürünlere! Farm2Shelf; tarım üretimi, atölye işleme süreçleri, mağaza tasarımı, toptan lojistik ve online market teslimatlarını birleştiren yeni nesil bir işletme simülasyonudur.",
@@ -1827,17 +1915,17 @@
                     overviewTitle: "Oyun Künyesi",
                     stats: {
                         "Kategori": "Çiftlik & Market Tycoon / Simülasyon",
-                        "Platform": "Mobil (iOS & Android)",
-                        "Durum": "Yakında Çıkacak",
+                        "Platform": "iOS (iPhone, iPad)",
+                        "Durum": "Yayında (App Store)",
                         "Geliştirici": "EKT Games",
                         "Dil Desteği": "Türkçe, İngilizce"
                     },
-                    contactBtnText: "Erken Erişim / Geri Bildirim",
+                    appStoreBtnText: "App Store'da İndir",
                     closeBtnText: "Kapat"
                 },
                 en: {
                     title: "Farm2Shelf",
-                    badge: "In Development • Coming Soon",
+                    badge: "Live on iOS App Store",
                     color: "var(--accent-green)",
                     badgeColor: "rgba(16, 185, 129, 0.15)",
                     desc: "From harvested seeds to supermarket shelves! Farm2Shelf is a next-generation business tycoon simulation combining crop farming, workshop processing, supermarket design, wholesale logistics, and e-commerce deliveries.",
@@ -1854,10 +1942,118 @@
                     overviewTitle: "Game Overview",
                     stats: {
                         "Category": "Farm & Supermarket Tycoon",
-                        "Platform": "Mobile (iOS & Android)",
-                        "Status": "Coming Soon",
+                        "Platform": "iOS (iPhone, iPad)",
+                        "Status": "Available on App Store",
                         "Developer": "EKT Games",
                         "Languages": "Turkish, English"
+                    },
+                    appStoreBtnText: "Download on App Store",
+                    closeBtnText: "Close"
+                }
+            },
+            conquerra: {
+                tr: {
+                    title: "Conquerra",
+                    badge: "Geliştirilme Aşamasında • Yakında Çıkacak",
+                    color: "var(--accent-amber)",
+                    badgeColor: "rgba(245, 158, 11, 0.15)",
+                    desc: "Conquerra, taş bir tahta üzerinde dört ırkın karşılaştığı 3D bir strateji oyunudur. Bir ırkı sen seçersin; diğer üçü yapay zekâdır. Askerlerin menzili içindeki karelere adım adım yürür.",
+                    lore: "Köşendeki ordunla yola çık. Düşman bulunan bir kareye girdiğin anda iki yığın da o karenin içinde durur, askerler sol ve sağa ayrılır ve savaş orada çözülür. Kazanan kareyi alır; kalan menzili varsa yürüyüşüne devam eder.",
+                    featuresTitle: "Öne Çıkan Özellikler",
+                    features: [
+                        "Dört ırk, dört köşe: Bir ırkı seç, diğer üç yapay zekâ rakibe karşı tahtayı paylaş",
+                        "Kare kare yürüyüş: Askerler menzilleri içindeki karelere adım adım ilerler",
+                        "Kare içi savaş: Düşman karesine girince yığınlar ikiye ayrılır, vuruşlar o karenin içinde çözülür",
+                        "Mızrak önceliği: Mızraklılar önce vurur; kazanan kareyi alır ve kalan menziliyle yoluna devam eder",
+                        "Yığın sınırı: Aynı karede bir ırktan en fazla beş asker durur",
+                        "Taş tahta: Kale, askerler ve dikilitaşlarla kurulan üç boyutlu savaş sahnesi"
+                    ],
+                    overviewTitle: "Oyun Künyesi",
+                    stats: {
+                        "Kategori": "Strateji / Tahta Savaşı",
+                        "Platform": "Mobil",
+                        "Durum": "Yakında Çıkacak",
+                        "Geliştirici": "EKT Games"
+                    },
+                    contactBtnText: "Erken Erişim / Geri Bildirim",
+                    closeBtnText: "Kapat"
+                },
+                en: {
+                    title: "Conquerra",
+                    badge: "In Development • Coming Soon",
+                    color: "var(--accent-amber)",
+                    badgeColor: "rgba(245, 158, 11, 0.15)",
+                    desc: "Conquerra is a 3D strategy game where four factions clash on a stone board. You choose one faction; the other three are controlled by AI. Soldiers march square by square within their range.",
+                    lore: "Set out from your corner. The moment you enter a tile held by an enemy, both stacks stop inside that square, split left and right, and the battle is settled there. The winner keeps the tile and continues with any range still left.",
+                    featuresTitle: "Key Features",
+                    features: [
+                        "Four factions, four corners: Pick one side and face three AI rivals across the board",
+                        "Square-by-square movement: Soldiers advance one tile at a time within their range",
+                        "Battles on the tile: Enter an enemy square and the stacks split, fighting inside that tile",
+                        "Spears strike first: The winner holds the square and keeps marching with remaining range",
+                        "Stack limit: No more than five soldiers of the same faction can stand on one square",
+                        "Stone board: A 3D battlefield of castle, soldiers, and obelisks"
+                    ],
+                    overviewTitle: "Game Overview",
+                    stats: {
+                        "Category": "Strategy / Board Battle",
+                        "Platform": "Mobile",
+                        "Status": "Coming Soon",
+                        "Developer": "EKT Games"
+                    },
+                    contactBtnText: "Early Access / Feedback",
+                    closeBtnText: "Close"
+                }
+            },
+            terratactix: {
+                tr: {
+                    title: "TerraTactix",
+                    badge: "Geliştirilme Aşamasında • Yakında Çıkacak",
+                    color: "var(--accent-blue)",
+                    badgeColor: "rgba(59, 130, 246, 0.15)",
+                    desc: "TerraTactix, kurgusal bir gezegende toprak büyüten tek oyunculu bir mobil oyundur. Küçük bir bölgeden başlar, dünya haritasında komşu toprakları seçer ve seferleri düşen blok bulmacalarıyla kazanırsın.",
+                    lore: "Haritayı aç, bağlı bir bölgeye saldır ve sefere çık. Blokları yerleştir, aynı türleri birleştir, satırları temizle. Sefer tamamlanınca toprak senin olur; yeni kıtalar, görevler ve günlük çark seni bekler.",
+                    featuresTitle: "Öne Çıkan Özellikler",
+                    features: [
+                        "Kurgusal dünya haritası: Çayır, orman, çöl, buz, volkan, kristal ve ada bölgeleri",
+                        "Bağlı topraklar: Küçük bir alandan başla, yalnızca komşu bölgeleri seferlerle aç",
+                        "Blok savaşları: Düşen parçaları yerleştir, aynı blokları birleştir ve satır temizle",
+                        "Seferler: Bir bölgeyi fethetmek için bir veya daha fazla seferi tamamla",
+                        "Kalp ve altın: Savaşa kalple gir, kazandığın altını dükkânda yükseltmelere harca",
+                        "Günlük çark, görevler ve başarımlar: İlerleyişin çevrimdışı da kaydedilir"
+                    ],
+                    overviewTitle: "Oyun Künyesi",
+                    stats: {
+                        "Kategori": "Bulmaca / Toprak Fetih",
+                        "Platform": "Mobil",
+                        "Durum": "Yakında Çıkacak",
+                        "Geliştirici": "EKT Games"
+                    },
+                    contactBtnText: "Erken Erişim / Geri Bildirim",
+                    closeBtnText: "Kapat"
+                },
+                en: {
+                    title: "TerraTactix",
+                    badge: "In Development • Coming Soon",
+                    color: "var(--accent-blue)",
+                    badgeColor: "rgba(59, 130, 246, 0.15)",
+                    desc: "TerraTactix is a single-player mobile game about growing your hold on a fictional planet. Begin with a small region, pick a connected land on the world map, and win expeditions through falling-block puzzle battles.",
+                    lore: "Open the map, attack a neighboring region, and set out on an expedition. Place blocks, merge matching pieces, and clear lines. Finish the expedition and the land is yours, with new continents, missions, and a daily wheel still ahead.",
+                    featuresTitle: "Key Features",
+                    features: [
+                        "Fictional world map: Grassland, forest, desert, ice, volcanic, crystal, and island regions",
+                        "Connected territories: Start small and unlock only neighboring lands through expeditions",
+                        "Block battles: Drop pieces, merge matching blocks, and clear lines to hit the target score",
+                        "Expeditions: Capture a region by completing one or more expeditions",
+                        "Hearts and gold: Spend a heart to fight, then use gold in the shop for upgrades",
+                        "Daily wheel, missions, and achievements: Progress stays playable offline"
+                    ],
+                    overviewTitle: "Game Overview",
+                    stats: {
+                        "Category": "Puzzle / Territory Conquest",
+                        "Platform": "Mobile",
+                        "Status": "Coming Soon",
+                        "Developer": "EKT Games"
                     },
                     contactBtnText: "Early Access / Feedback",
                     closeBtnText: "Close"
@@ -1898,9 +2094,21 @@
                         <i data-lucide="apple"></i> ${gameLangData.appStoreBtnText}
                     </a>
                 `;
-            } else {
+            } else if (gameKey === 'farm2shelf') {
                 actionBtnHtml = `
-                    <a href="#contact" onclick="closeModal(); document.getElementById('interest').value='farm2shelf';" class="btn btn-green">
+                    <a href="https://apps.apple.com/ar/app/farm2shelf/id6802213999" target="_blank" rel="noopener noreferrer" class="btn btn-appstore">
+                        <i data-lucide="apple"></i> ${gameLangData.appStoreBtnText}
+                    </a>
+                `;
+            } else if (gameKey === 'conquerra') {
+                actionBtnHtml = `
+                    <a href="#contact" onclick="closeModal(); document.getElementById('interest').value='conquerra';" class="btn btn-amber">
+                        <i data-lucide="mail"></i> ${gameLangData.contactBtnText}
+                    </a>
+                `;
+            } else if (gameKey === 'terratactix') {
+                actionBtnHtml = `
+                    <a href="#contact" onclick="closeModal(); document.getElementById('interest').value='terratactix';" class="btn btn-blue">
                         <i data-lucide="mail"></i> ${gameLangData.contactBtnText}
                     </a>
                 `;
@@ -2061,10 +2269,10 @@
             const pageMeta = document.getElementById('page-meta-desc');
             if (lang === 'en') {
                 if (pageTitle) pageTitle.innerText = "EKT Games | Independent Game Studio";
-                if (pageMeta) pageMeta.setAttribute("content", "EKT Games is an independent game development studio creating immersive simulation, management, and strategy titles including Behind the Scenes Football and Farm2Shelf.");
+                if (pageMeta) pageMeta.setAttribute("content", "EKT Games is an independent game development studio creating immersive simulation, management, and strategy titles including Behind the Scenes Football, Farm2Shelf, Conquerra, and TerraTactix.");
             } else {
                 if (pageTitle) pageTitle.innerText = "EKT Games | Bağımsız Oyun Geliştirme Stüdyosu";
-                if (pageMeta) pageMeta.setAttribute("content", "EKT Games; Perde Arkası Futbol ve Farm2Shelf gibi sürükleyici simülasyon, menajerlik ve strateji oyunları geliştiren bağımsız oyun stüdyosudur.");
+                if (pageMeta) pageMeta.setAttribute("content", "EKT Games; Perde Arkası Futbol, Farm2Shelf, Conquerra ve TerraTactix gibi sürükleyici simülasyon, menajerlik ve strateji oyunları geliştiren bağımsız oyun stüdyosudur.");
             }
 
             // 2. All Elements with data-tr and data-en
