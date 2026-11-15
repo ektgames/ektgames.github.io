@@ -1570,8 +1570,8 @@
                     <div class="game-img-wrapper" style="background: #3d4a32;">
                         <img src="images/conquerra_icon.jpg" alt="Conquerra" class="game-img" style="object-fit: contain;">
                         <div class="game-card-overlay"></div>
-                        <span class="game-status-badge" style="border-color: var(--accent-amber); color: var(--accent-amber);" data-tr="Yakında Çıkacak" data-en="Coming Soon">
-                            <i data-lucide="clock"></i> <span class="translatable">Yakında Çıkacak</span>
+                        <span class="game-status-badge" style="border-color: var(--accent-amber); color: var(--accent-amber);" data-tr="iOS App Store'da Yayında" data-en="Live on iOS App Store">
+                            <i data-lucide="apple"></i> <span class="translatable">iOS App Store'da Yayında</span>
                         </span>
                     </div>
                     <div class="game-content">
@@ -1585,12 +1585,12 @@
                             Dört ırk, tek taş tahta. Köşenden ordunu kare kare yürüt; düşman karesine girdiğinde yığınlar ikiye ayrılır ve savaş o karenin içinde çözülür. Kazanan toprak alır, kalan menziliyle yürüyüşüne devam eder.
                         </p>
                         <div class="game-actions">
-                            <button class="btn btn-amber btn-sm details-btn" data-game="conquerra" data-tr="Detayları İncele" data-en="Explore Details">
-                                <i data-lucide="sparkles"></i> <span class="translatable">Detayları İncele</span>
-                            </button>
-                            <a href="#contact" class="btn btn-secondary btn-sm select-game-link" data-select-game="conquerra" data-tr="Geri Bildirim" data-en="Feedback">
-                                <i data-lucide="mail"></i> <span class="translatable">Geri Bildirim</span>
+                            <a href="https://apps.apple.com/cy/app/conquerra/id6825934111?l=tr" target="_blank" rel="noopener noreferrer" class="btn btn-appstore btn-sm" data-tr="App Store'da İndir" data-en="Download on App Store">
+                                <i data-lucide="apple"></i> <span class="translatable">App Store'da İndir</span>
                             </a>
+                            <button class="btn btn-secondary btn-sm details-btn" data-game="conquerra" data-tr="Detaylar" data-en="Details">
+                                <i data-lucide="info"></i> <span class="translatable">Detaylar</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1731,7 +1731,7 @@
                     <ul class="footer-links">
                         <li><a href="https://apps.apple.com/tr/app/perde-arkas%C4%B1-futbol/id6797440432?l=tr" target="_blank" rel="noopener noreferrer" data-tr="Perde Arkası Futbol (iOS)" data-en="Behind the Scenes Football (iOS)">Perde Arkası Futbol (iOS)</a></li>
                         <li><a href="https://apps.apple.com/ar/app/farm2shelf/id6802213999" target="_blank" rel="noopener noreferrer" data-tr="Farm2Shelf (iOS)" data-en="Farm2Shelf (iOS)">Farm2Shelf (iOS)</a></li>
-                        <li><a href="#projects" onclick="openGameModalFromKey('conquerra')" data-tr="Conquerra (Yakında)" data-en="Conquerra (Coming Soon)">Conquerra (Yakında)</a></li>
+                        <li><a href="https://apps.apple.com/cy/app/conquerra/id6825934111?l=tr" target="_blank" rel="noopener noreferrer" data-tr="Conquerra (iOS)" data-en="Conquerra (iOS)">Conquerra (iOS)</a></li>
                         <li><a href="#projects" onclick="openGameModalFromKey('terratactix')" data-tr="TerraTactix (Yakında)" data-en="TerraTactix (Coming Soon)">TerraTactix (Yakında)</a></li>
                         <li><a href="#contact" data-tr="Oyuncu Desteği" data-en="Player Support">Oyuncu Desteği</a></li>
                     </ul>
@@ -1965,7 +1965,7 @@
             conquerra: {
                 tr: {
                     title: "Conquerra",
-                    badge: "Geliştirilme Aşamasında • Yakında Çıkacak",
+                    badge: "iOS App Store'da Yayında",
                     color: "var(--accent-amber)",
                     badgeColor: "rgba(245, 158, 11, 0.15)",
                     desc: "Conquerra, taş bir tahta üzerinde dört ırkın karşılaştığı 3D bir strateji oyunudur. Bir ırkı sen seçersin; diğer üçü yapay zekâdır. Askerlerin menzili içindeki karelere adım adım yürür.",
@@ -1982,16 +1982,16 @@
                     overviewTitle: "Oyun Künyesi",
                     stats: {
                         "Kategori": "Strateji / Tahta Savaşı",
-                        "Platform": "Mobil",
-                        "Durum": "Yakında Çıkacak",
+                        "Platform": "iOS",
+                        "Durum": "Yayında (App Store)",
                         "Geliştirici": "EKT Games"
                     },
-                    contactBtnText: "Erken Erişim / Geri Bildirim",
+                    appStoreBtnText: "App Store'da İndir",
                     closeBtnText: "Kapat"
                 },
                 en: {
                     title: "Conquerra",
-                    badge: "In Development • Coming Soon",
+                    badge: "Live on iOS App Store",
                     color: "var(--accent-amber)",
                     badgeColor: "rgba(245, 158, 11, 0.15)",
                     desc: "Conquerra is a 3D strategy game where four factions clash on a stone board. You choose one faction; the other three are controlled by AI. Soldiers march square by square within their range.",
@@ -2008,11 +2008,11 @@
                     overviewTitle: "Game Overview",
                     stats: {
                         "Category": "Strategy / Board Battle",
-                        "Platform": "Mobile",
-                        "Status": "Coming Soon",
+                        "Platform": "iOS",
+                        "Status": "Available on App Store",
                         "Developer": "EKT Games"
                     },
-                    contactBtnText: "Early Access / Feedback",
+                    appStoreBtnText: "Download on App Store",
                     closeBtnText: "Close"
                 }
             },
@@ -2113,8 +2113,8 @@
                 `;
             } else if (gameKey === 'conquerra') {
                 actionBtnHtml = `
-                    <a href="#contact" onclick="closeModal(); document.getElementById('interest').value='conquerra';" class="btn btn-amber">
-                        <i data-lucide="mail"></i> ${gameLangData.contactBtnText}
+                    <a href="https://apps.apple.com/cy/app/conquerra/id6825934111?l=tr" target="_blank" rel="noopener noreferrer" class="btn btn-appstore">
+                        <i data-lucide="apple"></i> ${gameLangData.appStoreBtnText}
                     </a>
                 `;
             } else if (gameKey === 'terratactix') {
