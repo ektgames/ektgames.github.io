@@ -2385,7 +2385,7 @@
             lucide.createIcons();
 
             const submissionController = new AbortController();
-            const submissionTimeout = setTimeout(() => submissionController.abort(), 20000);
+            const submissionTimeout = setTimeout(() => submissionController.abort(), 30000);
 
             try {
                 const response = await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
